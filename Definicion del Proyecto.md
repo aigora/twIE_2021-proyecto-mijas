@@ -1,7 +1,7 @@
 # [Restaurante Mijas]
 
 ## [Integrantes]
-Diego Fernandes Alve(DiegoFernandesAlves) , Diego Bastida Juanes().
+Diego Fernandes Alve(DiegoFernandesAlves) , Diego Bastida Juanes(Diego-Bastida).
 
 ### [Objetivo] 
 Crear una plataforma interactiva con el usuario para resolver sus dudas o consultas sin tener que acudir al propio restaurante, dependiendo de si se trata de un cliente, un proveedor o cualquier otra identidad de interés con el restaurante. 
