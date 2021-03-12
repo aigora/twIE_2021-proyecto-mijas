@@ -1,6 +1,5 @@
-# twIE_2021-proyecto-mijas
-twIE_2021-proyecto-mijas created by GitHub Classroom
 [Restaurante Mijas]
+
 [Integrantes]
 Diego Fernandes Alve(DiegoFernandesAlves) , Diego Bastida Juanes(Diego-Bastida).
 
