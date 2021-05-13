@@ -41,8 +41,6 @@ void cliente(char c)
             }
 
         }while (op2!='c'  &&  op2!='p' &&  op2!='s' &&  op2!='l' &&  op2!='a' && op2!='C'  &&  op2!='P' &&  op2!='S' &&  op2!='L' &&  op2!='A');
-
-
 }
 
 void proveedor(char c)
