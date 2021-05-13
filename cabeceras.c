@@ -47,64 +47,49 @@ void cliente(char c)
 
 void proveedor(char c)
 {
-    do{
-
-
-        system("cls");
-        printf("Bienvenido Proveedor\n");
-        printf("Identificarse por tipo de producto: ");
-        printf("- Bebida, 'M'\n");
-        printf("- Comida, 'C'\n");
-        printf("- Tabaco, 'T'\n");
-        printf("- Otro, 'O'\n");
-
-
-            scanf("%c", &op3);
-            proveedor(op3);
-                switch (c)
-            {
-                case 'm':
-                case 'M':
-                    printf("Bebida\n");
-                    break;
-                case 'c':
-                case 'C':
-                    printf("Comida\n");
-                    break;
-                case 't':
-                case 'T':
-                    printf("Tabaco\n");
-                    break;
-                case 'o':
-                case 'O':
-                    printf("Otro\n");
-                    break;
-                default:
-
-                    break;
-            }
-
-      }while(op3!='m'  &&  op3!='M' &&  op3!='c' &&  op3!='C' &&  op3!='t' && op3!='T'  &&  op3!='O' &&  op3!='o');
-
-        break;
-}
-
-void publicista()
-
-void gobierno(char c)
-{
-     do{
-
-        system("cls");
-        printf("¿Pertenece a Sanidad o Policia (Sanidad 'S', Policia 'P')?: ");
-        scanf("%c", );
-        printf("\n");
-
-     }while(op4 !='P' && op4!= 'p' && op4!= 's' && op4!= 'S');
-       if(op4 == 's' || op4 == 'S'){
-            printf("Bienvenido Sanidad\n");
-        }else{
-            printf("Bienvenido Policia\n");
-        }
+    printf("¡Bienvenido proveedor\a!")
+    printf("¿Que clase de producto abastece? Escriba el producto del que nos provee de los siguientes:\n");
+    printf("Tabaco ; Bebida ; Pescado ; Carnes ;\n");
+    do
+    {
+       printf("¿Su producto se encuentra entre los anteriores? Responda sí o no:\t");
+       scanf("%c",&respuesta);
+    if (respuesta=='si' && respuesta=='sí' && respuesta=='Si' && respuesta=='Sí' && respuesta=='SI' && respuesta=='SÍ')
+    {
+      do
+      {
+        printf("Escriba el producto del que nos abastece de los presentados tal y como se indican:\t");
+        scanf("%c",&opidentidad);
+        switch (opidentidad)
+       {
+        case 'tabaco':
+        case 'Tabaco':
+        case 'TABACO':
+          proveedortabaco();
+          break;
+        case 'bebida':
+        case 'Bebida':
+        case 'BEBIDA':
+          proveedorbebida();
+          break;
+        case 'pescado':
+        case 'Pescado':
+        case 'PESCADO':
+          proveedorpescado();
+          break;
+        case 'carnes':
+        case 'Carnes':
+        case 'CARNES':
+          proveedorcarne ();
+          break;
+       }
+      }
+      while (opidentidad!='tabaco' && opidentidad!='Tabaco' && opidentidad!='TABACO' && opidentidad!='bebida' && opidentidad!='Bebida' && opidentidad!='BEBIDA' && opidentidad!='pescado' && opidentidad!='Pescado' && opidentidad!='PESCADO' && opidentidad!='carnes' && opidentidad!='Carnes' && opidentidad!='CARNES')
+    }
+    }
+    else if (respuesta=='no' && respuesta=='NO' && respuesta=='No')
+        printf("Si no es proveedor de ninguno de los productos anteriores, puede llamar al número facilitado en el menú principal.\n");
+    }
+    while (respuesta!='si' && respuesta!='sí' && respuesta!='Si' && respuesta!='Sí' && respuesta!='SI' && respuesta!='SÍ' && respuesta!='no' && respuesta!='NO' && respuesta!='No');
 
 }
