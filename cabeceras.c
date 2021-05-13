@@ -2,7 +2,7 @@
 
 void cliente(char c)
 {
-
+char opCliente
      do{
         system ("cls");
         printf("Bienvenido cliente, escriba que quiere consultar o realizar:\n");
@@ -11,12 +11,13 @@ void cliente(char c)
         printf("- Consultar suplementos, 'S';\n");
         printf("- Localizacion del restaurante, 'L';\n");
         printf("- Informe de alergenos, 'A'\n\n");
-
-     switch (c)
+scanf("%c", &opCliente);
+     switch(opCliente)
             {
                 case 'c':
                 case 'C':
-                    printf("carta\n");
+                    carta(opCliente);
+                    //printf("carta\n");
                     break;
                 case 'p':
                 case 'P':
@@ -40,7 +41,13 @@ void cliente(char c)
                     break;
             }
 
+<<<<<<< Updated upstream
         }while (op2!='c'  &&  op2!='p' &&  op2!='s' &&  op2!='l' &&  op2!='a' && op2!='C'  &&  op2!='P' &&  op2!='S' &&  op2!='L' &&  op2!='A');
+=======
+        }while (c!='c'  &&  c!='p' &&  c!='s' &&  c!='l' &&  c!='a' && c!='C'  &&  c!='P' &&  c!='S' &&  c!='L' &&  c!='A');
+
+
+>>>>>>> Stashed changes
 }
 
 void proveedor(char c)

@@ -1,1 +1,3 @@
 
+
+avoid carta(puntero *p);

@@ -19,12 +19,12 @@ int main(){
 
       case 'C':
       case 'c':
-            cliente(op1);
+            cliente(void);
           break;
 
       case 'P':
       case 'p':
-          proveedor(op1);
+          proveedor(void);
         break;
 
       case 'u':
@@ -34,7 +34,7 @@ int main(){
 
       case 'G':
       case 'g':
-          gobierno(op1);
+          gobierno(void);
 
 break;
         default:
