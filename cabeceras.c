@@ -89,5 +89,3 @@ void proveedor(char c)
         printf("Si no es proveedor de ninguno de los productos anteriores, puede llamar al número facilitado en el menú principal.\n");
     }
     while (respuesta!='si' && respuesta!='sí' && respuesta!='Si' && respuesta!='Sí' && respuesta!='SI' && respuesta!='SÍ' && respuesta!='no' && respuesta!='NO' && respuesta!='No');
-
-}
