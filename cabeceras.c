@@ -52,6 +52,7 @@ scanf("%c", &opCliente);
 
 void proveedor(char c)
 {
+    char respuesta,producto;
     printf("¡Bienvenido proveedor\a!")
     printf("¿Que clase de producto abastece? Escriba el producto del que nos provee de los siguientes:\n");
     printf("Tabaco ; Bebida ; Pescado ; Carnes ;\n");
@@ -64,8 +65,8 @@ void proveedor(char c)
       do
       {
         printf("Escriba el producto del que nos abastece de los presentados tal y como se indican:\t");
-        scanf("%c",&opidentidad);
-        switch (opidentidad)
+        scanf("%c",&producto);
+        switch (producto)
        {
         case 'tabaco':
         case 'Tabaco':
@@ -85,11 +86,11 @@ void proveedor(char c)
         case 'carnes':
         case 'Carnes':
         case 'CARNES':
-          proveedorcarne ();
+          proveedorcarne();
           break;
        }
       }
-      while (opidentidad!='tabaco' && opidentidad!='Tabaco' && opidentidad!='TABACO' && opidentidad!='bebida' && opidentidad!='Bebida' && opidentidad!='BEBIDA' && opidentidad!='pescado' && opidentidad!='Pescado' && opidentidad!='PESCADO' && opidentidad!='carnes' && opidentidad!='Carnes' && opidentidad!='CARNES')
+      while (producto!='tabaco' && producto!='Tabaco' && producto!='TABACO' && producto!='bebida' && producto!='Bebida' && producto!='BEBIDA' && producto!='pescado' && producto!='Pescado' && producto!='PESCADO' && producto!='carnes' && producto!='Carnes' && producto!='CARNES')
     }
     }
     else if (respuesta=='no' && respuesta=='NO' && respuesta=='No')
