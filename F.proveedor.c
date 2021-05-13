@@ -19,6 +19,8 @@ void proveedortabaco (void)
         printf("\n\n");
     }
    fclose(t);
+
+
 }
 void proveedorbebida(void)
 {

@@ -13,26 +13,27 @@ int main(){
     printf("Cliente 'C',Proveedor 'P', Publicista 'U', Gobierno 'G', Salir 'S':");
     scanf("%c", &op1);
 
-      switch (op1){
+      switch (op1)
+      {
 
       case 'C':
       case 'c':
-            cliente(void);
+            cliente();
           break;
 
       case 'P':
       case 'p':
-          proveedor(void);
+          proveedor();
         break;
 
       case 'u':
       case 'U':
-        printf("Identifique tipo de publicidad: ");
+        publicista();
       break;
 
       case 'G':
       case 'g':
-          gobierno(void);
+          gobierno();
 
 break;
         default:
