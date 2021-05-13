@@ -1,6 +1,4 @@
 #include "proveedores.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void proveedortabaco (void)
 {
