@@ -1,10 +1,14 @@
 #include "F.proveedor.h"
-
+typedef struct
+{
+   int dia;
+   int mes;
+}fecha;
 void proveedortabaco (void)
 {
   char listatabaco[1000];
   FILE *t = fopen("listatabaco.txt","r");
-  printf("Le adjuntamos nuestras provisiones actuales de TABACO:\n");
+  printf("Le adjuntamos nuestras necesidades actuales de TABACO:\n");
   if (t == NULL)
     {
         printf("Error al abrir el documento, inténtelo de nuevo.\n");
@@ -19,6 +23,21 @@ void proveedortabaco (void)
         printf("\n\n");
     }
    fclose(t);
+
+   printf("Concretemos fecha y hora para el reabastecimiento.\n");
+   printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
+   fecha entrega;
+   printf("Introduzca cuándo nos entregará las provisiones:\n");
+   printf("Escriba la fecha de la siguiente manera: dd , mm (separado con coma).\n");
+   scanf("%i , %i",&entrega.dia,&entrega.mes);
+
+
+
+   printf("¿Qué cantidades de cada producto nos va a traer?");
+   printf("Escriba el nombre del producto completo y a continuación\n");
+   printf("(separado por un espacio)el número de paquetes que va a traernos.\n");
+   FILE *tr = fopen("tabacotrae.txt","w");
+
 
 
 }

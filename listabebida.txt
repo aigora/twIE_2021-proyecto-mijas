@@ -1,23 +1,27 @@
-(1 Caja = 15 unidades)(NECESITAMOS ÚNICAMENTE LAS BEBIDAS MARCADAS CON UN SÍMBOLO "+")
+(1 Caja = 15 unidades)
+(NECESITAMOS ÚNICAMENTE LAS CAJAS MARCADAS A LA DERECHA DE CADA BEBIDA)
+*****************************COCA-COLA*************************************************
 
-*****************************COCA-COLA******************************************
+-Coca-Cola Original (3 Cajas).                -Fanta Naranja (2 Cajas).
 
--Coca-Cola Original (9 Cajas).                -Fanta Naranja (6 Cajas).
+-Coca-Cola Light (2 Cajas).                   -Fanta Limón (NADA).
 
--Coca-Cola Light (7 Cajas + 1/2).             -Fanta Limón (2 Cajas).
+-Coca-Cola Zero (1 cajas).                    -Nestea (NADA).
 
--Coca-Cola Zero (7 cajas).                    -Nestea (3 Cajas).
+-Coca-Cola Zero-Zero (NADA).                  -Aquarius (1 Cajas).
 
--Coca-Cola Zero-Zero (2 cajas).               -Aquarius (7 Cajas).
+-Trinaranjus (1 cajas).                       -Aquarius de Limón (NADA).
 
--Trinaranjus (4 cajas).                      -Aquarius de Limón.
+*****************************SCHWEPPES*************************************************
 
-*****************************SCHWEPPES*****************************************
+-Schweppes Tónica Original (1 cajas).         -Schweppes Tónica Pink (NADA).
 
--Schweppes Tónica Original (4 cajas).        -Schweppes Tónica Pink (1 caja).
+-Schweppes Limón (NADA).                      -Schweppes Naranja (NADA).
 
--Schweppes Limón (1 caja).                   -Schweppes Naranja (1/2 caja).
+*****************************CERVEZA***************************************************
 
-*****************************CERVEZA*************************************************
+-1/3 Estrella Galicia Normal (3 Cajas).       -1/5 Estrella Galicia Sin Alcohol (1 Cajas).
 
--1/3 Estrella Galicia Normal ()
+-1/3 Estrella Galicia 1906 (3 Cajas).         -1/3 Estrella Galicia Tostada %0 (NADA).
+
+-1/3 Mahou 5 Estrellas (2 Cajas).             -1/3 Mahou Maestra (1 Cajas).
