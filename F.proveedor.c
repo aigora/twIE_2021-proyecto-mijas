@@ -1,4 +1,5 @@
 #include "F.proveedor.h"
+#include <time.h>
 typedef struct
 {
    int dia;
@@ -28,8 +29,36 @@ void proveedortabaco (void)
    printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
    fecha entrega;
    printf("Introduzca cuándo nos entregará las provisiones:\n");
-   printf("Escriba la fecha de la siguiente manera: dd , mm (separado con coma).\n");
+   printf("Escriba la fecha de la siguiente manera: dd , mm (separado con coma):\t");
    scanf("%i , %i",&entrega.dia,&entrega.mes);
+   time_t a;
+   struct tm *tm;
+   char fechaactual[100];
+   a=time(NULL);
+   tm=localtime(&a);
+   strftime(fechaactual, 100, "%d,%m", tm);
+   printf ("Hoy es: %s\n", fechaactual);
+   if (entrega.dia > time_t + 6)
+    {
+        do
+        {
+          printf("No podemos permitirmos tantos dias sin reponer tabaco.\n");
+          printf("Como máximo admitimos una semana por reabastecimiento.");
+          printf("Puede consultar las condiciones en el apartado de contrato.");
+          printf("Por favor, corrija la fecha de entrega:\t")
+          scanf("%i , %i",&entrega.dia,&entrega.mes);
+        }
+        while (entrega.dia > time_t + 6);
+
+    }
+    else
+    {
+        if (entrega.dia < time_t)
+        {
+            do
+        }
+    }
+
 
 
 
