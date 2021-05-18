@@ -36,7 +36,7 @@ void identificar(){
 
     FILE *f;
 
-    f = fopen("identificacion.txt", "w");
+    f = fopen("identificacion_publicista.txt", "w");
 
     if (f == NULL){
         printf("No se ha podido abrir.\n");
