@@ -24,21 +24,29 @@ void proveedortabaco (void)
         printf("\n\n");
     }
    fclose(t);
-
-   printf("Concretemos fecha y hora para el reabastecimiento.\n");
-   printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
-   fecha entrega;
-   printf("Introduzca cuándo nos entregará las provisiones:\n");
-   printf("Escriba la fecha de la siguiente manera: dd , mm (separado con coma):\t");
-   scanf("%i , %i",&entrega.dia,&entrega.mes);
-   time_t a;
-   struct tm *tm;
-   char fechaactual[100];
-   a=time(NULL);
-   tm=localtime(&a);
-   strftime(fechaactual, 100, "%d,%m", tm);
-   printf ("Hoy es: %s\n", fechaactual);
-   if (entrega.dia > time_t + 6)
+   FILE *r = fopen("fechaactual.txt","w");
+   int fechaactual[3];
+   fechaactual[0]=
+   fechaactual[1]=
+   fechaactual[2]=
+   if (r == NULL)
+    {
+        printf("Error, inténtelo de nuevo.\n");
+    }
+    else
+    {
+        fprintf(r,"%i,%i,%i",fechaactual[0],fechaactual[1],fechaactual[2]);
+        fclose(r);
+    }
+    printf("Concretemos fecha y hora para el reabastecimiento.\n");
+    printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
+    printf("Introduzca cuándo nos entregará las provisiones:\n");
+    printf("Escriba la fecha de la siguiente manera: dd , mm (separado con coma):\t");
+    fecha entrega;
+    scanf("%i , %i",&entrega.dia,&entrega.mes);
+    while (entrega.dia!>31 || entrega.dia!<0 || entrega.mes!>12 || entrega.mes!<0)
+    {
+       if (entrega.dia > fechaactual[0]+3)
     {
         do
         {
@@ -58,6 +66,9 @@ void proveedortabaco (void)
             do
         }
     }
+    }
+
+
 
 
 
