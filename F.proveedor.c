@@ -2,8 +2,9 @@
 #include <time.h>
 typedef struct
 {
-   int dia;
-   int mes;
+   int dd;
+   int mm;
+   int yy;
 }fecha;
 void proveedortabaco (void)
 {
@@ -25,20 +26,52 @@ void proveedortabaco (void)
     }
    fclose(t);
 
-   printf("Concretemos fecha y hora para el reabastecimiento.\n");
-   printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
-   fecha entrega;
-   printf("Introduzca cuándo nos entregará las provisiones:\n");
-   printf("Escriba la fecha de la siguiente manera: dd , mm (separado con coma):\t");
-   scanf("%i , %i",&entrega.dia,&entrega.mes);
-   time_t a;
-   struct tm *tm;
-   char fechaactual[100];
-   a=time(NULL);
-   tm=localtime(&a);
-   strftime(fechaactual, 100, "%d,%m", tm);
-   printf ("Hoy es: %s\n", fechaactual);
-   if (entrega.dia > time_t + 6)
+   printf("¿Qué cantidades de cada producto nos va a traer?");
+   printf("Escriba el nombre del producto completo y a continuación\n");
+   printf("(separado por un espacio)el número de paquetes que va a traernos.\n");
+   FILE *tr = fopen("tabacotrae.txt","w");
+
+   time_t rawtime = time(NULL);
+   struct tm *now = localtime(&rawtime);
+   fecha actual;
+   actual.dd = now->tm_mday;
+   actual.mm = now->tm_mon;
+   actual.yy = now->tm_year+1900;
+
+    printf("Concretemos fecha y hora para el reabastecimiento.\n");
+    printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
+    printf("Introduzca cuándo nos entregará las provisiones:\n");
+    printf("Escriba la fecha de la siguiente manera: dd/mm (separado con barra):\t");
+    fecha entrega;
+    scanf("%i/%i/%i",&entrega.dd,&entrega.mm,&entrega.yy);
+
+    fecha rango;
+    if (actual.dd>=entrega.dd)
+        rango.dd = actual.dd - entrega.dd;
+    else
+    {
+        actual.dd+=30;
+        actual.mm-=1;
+        rango.dd = actual.dd - entrega.dd;
+    }
+    if (actual.mm>=entrega.mm)
+        rango.mm = actual.mm - entrega.mm;
+    else
+    {
+        actual.mm+=12;
+        actual.yy-=1;
+        rango.mm = actual.mm - entrega.mm;
+    }
+    rango.yy = actual.yy-entrega.yy;
+
+    do
+    {
+       scanf("%i , %i",&entrega.dd,&entrega.mes);
+       if ()
+    }
+    while (entrega.dd!>31 || entrega.dd!<0 || entrega.mm!>12 || entrega.mm!<0)
+    {
+       if (entrega.dia > fechaactual[0]+3)
     {
         do
         {
@@ -48,24 +81,8 @@ void proveedortabaco (void)
           printf("Por favor, corrija la fecha de entrega:\t")
           scanf("%i , %i",&entrega.dia,&entrega.mes);
         }
-        while (entrega.dia > time_t + 6);
-
-    }
-    else
-    {
-        if (entrega.dia < time_t)
-        {
-            do
-        }
-    }
 
 
-
-
-   printf("¿Qué cantidades de cada producto nos va a traer?");
-   printf("Escriba el nombre del producto completo y a continuación\n");
-   printf("(separado por un espacio)el número de paquetes que va a traernos.\n");
-   FILE *tr = fopen("tabacotrae.txt","w");
 
 
 
