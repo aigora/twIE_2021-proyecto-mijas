@@ -1,27 +1,31 @@
 #include "cabeceras.h"
 
-void cliente(char c)
+void cliente(void)
 {
 char opCliente
+float cuenta,*pCuenta;
      do{
         system ("cls");
         printf("Bienvenido cliente, escriba que quiere consultar o realizar:\n");
         printf("- Consultar la carta, 'C';\n");
-        printf("- Calculadora de precios, 'P';\n");
+        printf("- Calculadora de precios/cuenta, 'P';\n");
         printf("- Consultar suplementos, 'S';\n");
         printf("- Localizacion del restaurante, 'L';\n");
-        printf("- Informe de alergenos, 'A'\n\n");
+        printf("- Informe de alergenos, 'A'\n");
+        printf("En el momento que desee finalizar la opcion cliente presione exit 'X'");
 scanf("%c", &opCliente);
      switch(opCliente)
             {
                 case 'c':
                 case 'C':
-                    carta(opCliente);
+                    carta(void);
                     //printf("carta\n");
                     break;
                 case 'p':
                 case 'P':
-                    printf("calculadora\n");
+                     cuenta=calculadora(void);
+                     pCuenta = &cuenta
+                   // printf("calculadora\n");
                     break;
                 case 'S':
                 case 's':
@@ -35,19 +39,13 @@ scanf("%c", &opCliente);
                 case 'a':
                     printf("Alergenos\n");
                     break;
-
-                default:
-
-                    break;
             }
 
-<<<<<<< Updated upstream
-        }while (op2!='c'  &&  op2!='p' &&  op2!='s' &&  op2!='l' &&  op2!='a' && op2!='C'  &&  op2!='P' &&  op2!='S' &&  op2!='L' &&  op2!='A');
-=======
-        }while (c!='c'  &&  c!='p' &&  c!='s' &&  c!='l' &&  c!='a' && c!='C'  &&  c!='P' &&  c!='S' &&  c!='L' &&  c!='A');
 
+        }while (opCliente!='c'  &&  opCliente!='p' &&  opCliente!='s' &&  opCliente!='l' &&  opCliente!='a' && opCliente!='C'  &&  opCliente!='P' &&  opCliente!='S' &&  opCliente!='L' &&  opCliente!='A');
+         //}while (c!='c'  &&  c!='p' &&  c!='s' &&  c!='l' &&  c!='a' && c!='C'  &&  c!='P' &&  c!='S' &&  c!='L' &&  c!='A');
+        printf("Desea continuar con la opcion cliente\t")
 
->>>>>>> Stashed changes
 }
 
 void proveedor(char c)

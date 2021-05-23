@@ -1,3 +1,4 @@
+#define N 11
 
-
-avoid carta(puntero *p);
+void carta(void);
+float calculadora(void)
