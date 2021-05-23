@@ -10,8 +10,10 @@ void proveedortabaco (void)
 {
   char listatabaco[1000];
   FILE *t = fopen("listatabaco.txt","r");
-  printf("Le adjuntamos nuestras necesidades actuales de TABACO:\n");
-  if (t == NULL)
+  do
+  {
+    printf("Le adjuntamos nuestras necesidades actuales de TABACO:\n");
+    if (t == NULL)
     {
         printf("Error al abrir el documento, inténtelo de nuevo.\n");
     }
@@ -25,11 +27,30 @@ void proveedortabaco (void)
         printf("\n\n");
     }
    fclose(t);
+  }
+  while (t == NULL);
 
-   printf("¿Qué cantidades de cada producto nos va a traer?");
-   printf("Escriba el nombre del producto completo y a continuación\n");
-   printf("(separado por un espacio)el número de paquetes que va a traernos.\n");
+
+
    FILE *tr = fopen("tabacotrae.txt","w");
+   do
+   {
+      printf("¿Qué cantidades de cada producto nos va a traer?");
+      if (tr == NULL)
+   {
+     printf("Error.");
+   }
+   else
+   {
+      printf("Fijese que a cada producto le corresponde un numero (x),\n");
+      printf("escriba dicho numero y a continuación el numero de bloques\n");
+      printf("que nos va a traer, separado por una coma los dos numeros, por ejemplo:\n");
+      printf("si nos quiere traer 2 bloques de Marlboro, escriba: 11,2\n");
+      printf("Escriba ahora ")
+   }
+   }
+   while (tr == NULL)
+
 
    time_t rawtime = time(NULL);
    struct tm *now = localtime(&rawtime);
@@ -38,17 +59,17 @@ void proveedortabaco (void)
    actual.mm = now->tm_mon;
    actual.yy = now->tm_year+1900;
 
-    printf("Concretemos fecha y hora para el reabastecimiento.\n");
-    printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
-    printf("Introduzca cuándo nos entregará las provisiones:\n");
-    printf("Escriba la fecha de la siguiente manera: dd/mm (separado con barra):\t");
-    fecha entrega;
-    scanf("%i/%i/%i",&entrega.dd,&entrega.mm,&entrega.yy);
+   printf("Concretemos fecha y hora para el reabastecimiento.\n");
+   printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
+   printf("Introduzca cuándo nos entregará las provisiones:\n");
+   printf("Escriba la fecha de la siguiente manera: dd/mm (separado con barra):\t");
+   fecha entrega;
+   scanf("%i/%i/%i",&entrega.dd,&entrega.mm,&entrega.yy);
 
-    fecha rango;
-    if (actual.dd>=entrega.dd)
-        rango.dd = actual.dd - entrega.dd;
-    else
+   fecha rango;
+   if (actual.dd>=entrega.dd)
+    rango.dd = actual.dd - entrega.dd;
+   else
     {
         actual.dd+=30;
         actual.mm-=1;
