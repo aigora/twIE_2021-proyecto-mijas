@@ -1,4 +1,9 @@
 
+******************************1 BLOQUE = 8 PAQUETES***********************************
+
+********Sólo necesitamos de los tipos marcados con un cierto numero de BLOQUES********
+
+
 (1) Lucky Strike (2 Bloques).               (2) Lucky Strike "Silver Bay" (1 Bloques).
 
 (3) Rothmans (NADA).                        (4) Fortuna "Blando" (2 Bloques).
