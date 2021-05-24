@@ -1,4 +1,5 @@
 #include "F.proveedor.h"
+#include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 typedef struct
@@ -9,7 +10,7 @@ typedef struct
 }fecha;
 void proveedortabaco (void)
 {
-    char elección;
+    char elec;
     printf("¿Quiere realizar una entrega de tabaco o consultar el contrato vigente?\n");
     printf("Si quiere realizar una entrega escriba: entrega;\n");
     printf("Si quiere consultar el contrato escriba: contrato.\n");
@@ -17,8 +18,8 @@ void proveedortabaco (void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elección);
-        if (elección='Entrega' || elección='entrega' || elección='ENTREGA')
+        scanf("%c",elec);
+        if ((elec='Entrega') || (elec='entrega') || (elec='ENTREGA'))
         {
             srand(time(NULL));
             int nums = rand()%4;
@@ -56,20 +57,20 @@ void proveedortabaco (void)
                     do
                     {
                        printf("Escriba los numeros requeridos:\t");
-                    scanf("%i,%i\n",&marca,&bloques);
-                    if (marca=3 || marca=5 || marca=7 || marca=8 || marca=10 || marca=13 || marca=14 || marca=15)
+                       scanf("%i,%i\n",&marca,&bloques);
+                       if ((marca=3) || (marca=5) || (marca=7) || (marca=8) || (marca=10) || (marca=13) || (marca=14) || (marca=15))
                         {
                             printf("No necesitamos de este tipo de tabaco,\n");
                             printf("lea la lista facilitada e intentelo de nuevo.\n");
                             terminar='no';
                         }
-                    else
+                        else
                         {
                             switch (marca)
                             {
                             case '1':
                                 {
-                                    if (bloques=1 || bloques=2)
+                                    if ((bloques=1) || (bloques=2))
                                     {
                                         printf("Perfecto.\n");
                                         terminar='si';
@@ -101,7 +102,7 @@ void proveedortabaco (void)
 
                             case '4':
                                 {
-                                    if (bloques=1 || bloques=2)
+                                    if ((bloques=1) || (bloques=2))
                                     {
                                         printf("Perfecto.\n");
                                         terminar='si';
@@ -133,7 +134,7 @@ void proveedortabaco (void)
 
                             case '9':
                                 {
-                                    if (bloques=1 || bloques=2)
+                                    if ((bloques=1) || (bloques=2))
                                     {
                                         printf("Perfecto.\n");
                                         terminar='si';
@@ -149,7 +150,7 @@ void proveedortabaco (void)
 
                             case '11':
                                 {
-                                    if (bloques=1 || bloques=2 || bloques=3)
+                                    if ((bloques=1) || (bloques=2) || (bloques=3))
                                     {
                                         printf("Perfecto.\n");
                                         terminar='si';
@@ -205,9 +206,9 @@ void proveedortabaco (void)
                         {
                             scanf("%c",terminar);
                         }
-                    while(terminar!='si' || terminar!='Si' || terminar!='SI' || terminar!='sí' || terminar!='Sí' || terminar!='SÍ' || terminar!='no' || terminar!='No' || terminar!='NO');
+                    while(terminar!='si' && terminar!='Si' && terminar!='SI' && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!='no' && terminar!='No' && terminar!='NO');
                 }
-                while (marca<1 || marca>16 || bloques<=0 || terminar='no' || terminar='No' || terminar='NO');
+                while ((marca<1) || (marca>16) || (bloques<=0) || (terminar='no') || (terminar='No') || (terminar='NO'));
 
             time_t rawtime = time(NULL);
             struct tm *now = localtime(&rawtime);
@@ -218,12 +219,12 @@ void proveedortabaco (void)
 
             printf("Concretemos la fecha para el reabastecimiento.\n");
             printf("Rescuerde que la recogida de provisiones se realiza desde las 8:00h hasta las 11:00h.\n");
-            printf("Introduzca cuándo nos entregará las provisiones:\n");
-            printf("Escriba la fecha de la siguiente manera: dd/mm/yy (separado con barra):\t");
+            printf("Introduzca cuándo nos entregará las provisiones.\n");
             fecha entrega,rango;
             int repetir;
             do
                 {
+                    printf("Escriba la fecha de la siguiente manera: dd/mm/yy (separado con barra):\t");
                     scanf("%i/%i/%i",&entrega.dd,&entrega.mm,&entrega.yy);
                     if (actual.dd>=entrega.dd)
                         rango.dd = actual.dd - entrega.dd;
@@ -245,7 +246,7 @@ void proveedortabaco (void)
 
                     if (rango.dd<8 && rango.mm<1 && rango.yy<1)
                         {
-                            printf("Perfecto.\n")
+                            printf("Perfecto.\n");
                             repetir=0;
                         }
                     else
@@ -253,48 +254,72 @@ void proveedortabaco (void)
                             printf("No podemos permitirmos tantos dias sin reponer tabaco.\n");
                             printf("Como máximo admitimos una semana por reabastecimiento.");
                             printf("Puede consultar las condiciones en el apartado de contrato.");
-                            printf("Por favor, corrija la fecha de entrega:\t")
+                            printf("Por favor, corrija la fecha de entrega:\t");
                             repetir=1;
                         }
                 }
-            while (entrega.dd!>31 || entrega.dd!<0 || entrega.mm!>12 || entrega.mm!<0 || repetir=1);
+            while ((entrega.dd > 31) || (entrega.dd < 0) || (entrega.mm > 12) || (entrega.mm < 0) || (entrega.yy < actual.yy) || (repetir=1));
 
         printf("Gracias. Hemos registrado los datos de la entrega.");
-        char otraoperación;
+        char otraop;
         char salirseguir;
         do
         {
           printf("¿Quiere realizar otra operacion como proveedor? (si/no):\t");
-          scanf("%c",otraoperación);
-          do
-          {
-            if (otraoperación='no' || otraoperación='No' || otraoperación='NO')
+          scanf("%c",otraop);
+            if ((otraop='no') || (otraop='No') || (otraop='NO'))
             {
               printf("¿Quiere volver al MENU PRINCIPAL o SALIR de nuestra plataforma?\n");
-              printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-              scanf("%c",salirseguir);
+
               do
               {
-                if (salirseguir='principal' || salirseguir='PRINCIPAL' || salirseguir='Principal')
-                    reset_
+                  printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
+                  scanf("%c",salirseguir);
+                if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                {
+                    printf("Volviendo al menu principal...")
+                    main();
+                }
+                else
+                {
+                    printf("Gracias por usar nuestra plataforma. Buen día.");
+                    return 0;
+                }
+
               }
+              while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
             }
-            else
-            {
-
-            }
-          }
-
-
         }
+        while(otraop!='no' && otraop!='No' && otraop!='NO' && otraop!='si' && otraop!='Si' && otraop!='SI' && otraop!='sí' && otraop!='Sí' && otraop!='SÍ');
 
         }
         else
         {
-            printf("Le mostramos en pantalla las condiciones vigentes del contrato:\n");
+            char contratotabaco[1000];
+            FILE *c = fopen("contratotabaco.txt","r");
+            do
+                {
+                    printf("Le mostramos el contrato vigente con PROVEEDOR-TABACO:\n");
+                    if (c == NULL)
+                        {
+                            printf("Error, inténtelo de nuevo.\n");
+                        }
+                    else
+                        {
+                            while ((feof(c)) == 0)
+                            {
+                                fscanf(c,"%s",contratotabaco);
+                                printf("%s\n",contratotabaco);
+                            }
+                            printf("\n\n");
+                        }
+                    fclose(t);
+                }
+            while (c == NULL);
+
         }
     }
-    while(elección!='entrega' && elección!='Entrega' && elección!='ENTREGA' && elección!='contrato' && elección!='Contrato' && elección!='CONTRATO');
+    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
 }
 
 
@@ -304,7 +329,7 @@ void proveedortabaco (void)
 
 void proveedorbebida(void)
 {
-    char elección;
+    char elec;
     printf("¿Quiere realizar una entrega de tabaco o consultar el contrato vigente?\n");
     printf("Si quiere realizar una entrega escriba: entrega;\n");
     printf("Si quiere consultar el contrato escriba: contrato.\n");
@@ -312,8 +337,8 @@ void proveedorbebida(void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elección);
-        if (elección='Entrega' || elección='entrega' || elección='ENTREGA')
+        scanf("%c",elec);
+        if (elec='Entrega' || elec='entrega' || elec='ENTREGA')
         {
             srand(time(NULL));
             int nums = rand()%4;
@@ -554,7 +579,7 @@ void proveedorbebida(void)
             printf("Le mostramos en pantalla las condiciones vigentes del contrato:\n");
         }
     }
-    while(elección!='entrega' && elección!='Entrega' && elección!='ENTREGA' && elección!='contrato' && elección!='Contrato' && elección!='CONTRATO');
+    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
 }
 
 
@@ -564,7 +589,7 @@ void proveedorbebida(void)
 
 void proveedorpescado (void)
 {
-    char elección;
+    char elec;
     printf("¿Quiere realizar una entrega de tabaco o consultar el contrato vigente?\n");
     printf("Si quiere realizar una entrega escriba: entrega;\n");
     printf("Si quiere consultar el contrato escriba: contrato.\n");
@@ -572,8 +597,8 @@ void proveedorpescado (void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elección);
-        if (elección='Entrega' || elección='entrega' || elección='ENTREGA')
+        scanf("%c",elec);
+        if (elec='Entrega' || elec='entrega' || elec='ENTREGA')
         {
             srand(time(NULL));
             int nums = rand()%4;
@@ -814,7 +839,7 @@ void proveedorpescado (void)
             printf("Le mostramos en pantalla las condiciones vigentes del contrato:\n");
         }
     }
-    while(elección!='entrega' && elección!='Entrega' && elección!='ENTREGA' && elección!='contrato' && elección!='Contrato' && elección!='CONTRATO');
+    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
 }
 
 
@@ -824,7 +849,7 @@ void proveedorpescado (void)
 
 void proveedorcarne (void)
 {
-    char elección;
+    char elec;
     printf("¿Quiere realizar una entrega de tabaco o consultar el contrato vigente?\n");
     printf("Si quiere realizar una entrega escriba: entrega;\n");
     printf("Si quiere consultar el contrato escriba: contrato.\n");
@@ -832,8 +857,8 @@ void proveedorcarne (void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elección);
-        if (elección='Entrega' || elección='entrega' || elección='ENTREGA')
+        scanf("%c",elec);
+        if (elec='Entrega' || elec='entrega' || elec='ENTREGA')
         {
             srand(time(NULL));
             int nums = rand()%4;
@@ -1074,6 +1099,6 @@ void proveedorcarne (void)
             printf("Le mostramos en pantalla las condiciones vigentes del contrato:\n");
         }
     }
-    while(elección!='entrega' && elección!='Entrega' && elección!='ENTREGA' && elección!='contrato' && elección!='Contrato' && elección!='CONTRATO');
+    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
 }
 
