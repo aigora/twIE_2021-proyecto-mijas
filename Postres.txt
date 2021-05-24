@@ -1,0 +1,10 @@
+1: Helados 2.50
+2: Batidos 3.00
+3: Torrijas 
+4: Arroz con leche 5.40
+5: Yogur griego 2.00
+6: Tarta helada 5.50
+7: Crema catalana 1.50
+8: Flan 2.99
+9: Pastelitos 4.50
+10: Tarta de queso 4.95

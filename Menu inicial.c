@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <f.clientes.h>
+#include <fclientes.h>
 
 int main(){
     char op1, op2, op3, op4;
@@ -27,9 +27,7 @@ int main(){
       case 'C':
       case 'c':
             cliente(void);
-
-          break;
-
+            break;
       case 'P':
       case 'p':
           proveedor();

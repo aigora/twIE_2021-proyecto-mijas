@@ -1,8 +1,11 @@
 #include "cabeceras.h"
 
+
 void cliente(void)
 {
 char opCliente
+int nPersonas, contPersonas=0;
+int *mesa;
 float cuenta,*pCuenta;
      do{
         system ("cls");
@@ -18,13 +21,38 @@ scanf("%c", &opCliente);
             {
                 case 'c':
                 case 'C':
-                    carta(void);
+ do{
+         printf("Cuantas personas sois:\t");
+         scanf("%i",&nPersonas);
+         if(nPersonas == 0)
+         printf("Numero de personas no valido, introduzca la cantidad de nuevo:");
+         else if(nPersonas == 1)
+         printf("Entendido, tome asiento enseguida le traemos la carta.");
+         else if(nPersonas > 1)
+         printf("Entendido, tomen asiento enseguida les traemos la carta.");
+   }while(nPersonas == 0)
+
+//mesa=malloc(sizeof(int)* nPersonas);
+//if (memoria == NULL) {
+//printf("Error: memoria no disponible.\n");
+//exit(-1);
+//}
+//for(contPersonas=0;contPersonas<nPersonas;contPersonas)
+do{
+    carta(void);
+    contPersonas++;
+
+}while(contPersonas<nPersonas)
+
+
                     //printf("carta\n");
                     break;
                 case 'p':
                 case 'P':
-                     cuenta=calculadora(void);
-                     pCuenta = &cuenta
+                     printf("Introduzca el numero de personas en la mesa:\t");
+                     scanf("%f",&nPersonas);
+                     cuenta=calculadora(nPersonas);
+                     //pCuenta = &cuenta;
                    // printf("calculadora\n");
                     break;
                 case 'S':

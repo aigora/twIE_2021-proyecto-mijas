@@ -1,0 +1,10 @@
+1: Entrecot 15.00
+2: Boquerones 7.60
+3: Conejo 10.50
+4: Picadillo  7
+5: Bacalao 13.00
+6: Merluza 5.10
+7: Solomillo 13.50
+8: Albondigas 6.45
+9: Ensalada 3.50
+10: Atun 14.00

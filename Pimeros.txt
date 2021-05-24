@@ -1,0 +1,10 @@
+1: Lentejas 15.00
+2: Ensaladilla 4.20
+3: Sopa 5.80
+4: Macarrones 4.60
+5: Migas 5
+6: Fidegua 5.10
+7: Canelones 6.45
+8: Pisto 4.65
+9: Paella 10.00
+10: Cocido 14.99

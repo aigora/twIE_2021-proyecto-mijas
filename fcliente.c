@@ -6,28 +6,20 @@ float precio;
 int nCarta;
 }carta;
 
-void cartas(void);
+void carta(void);
 {
-   //pedido1 = primero[N];
-   // pedida2=segundo[N];
-   //pedida3=ostre[N];
    FILE *elecFinal;
    FILE *pCalculadora;
    int eleccion1, eleccion2, eleccion3;
    carta primero[N], segundo[N],postre[N];
    int *pedido1;*pedida2;*pedido3;
    int pedidoprecio1,pedidoprecio2,pedidoprecio3;
-
-   //primero preguntamos cuantas personas son el la mesa,
-   //para repetir el proceso siguiente tantas veces
-
-
-
-FILE *pPrimeros,*pSegundos,*pPostres;
-pPrimeros = fopen("Primeros.txt", "r");
-pSegundos = fopen("Segundos.txt", "r");
-pPostres = fopen("Postres.txt", "r");
-if (pPrimeros == NULL)
+   //pedido1 = primero[N];
+   // pedida2=segundo[N];
+   //pedida3=ostre[N];
+   FILE *pPrimeros,*pSegundos,*pPostres;
+   pCarta = fopen("carta.txt", "r");
+   if (pCarta == NULL)
 {
 printf("Error al abrir el fichero.\n");
 return -1;
@@ -38,7 +30,7 @@ else
     {
          for(i=0;i<N;++i)
       {
-         fscanf(pPrimeros, "%d:%s %d ",&primero[i].nCarta, primero[i].plato,&primero[i].precio);
+         fscanf(pPrimeros, "%d %s %d ",&primero[i].nCarta, primero[i].plato,&primero[i].precio);
       }
     }
 fclose(pPrimeros);
@@ -47,7 +39,7 @@ fclose(pPrimeros);
     {
          for(i=0;i<N;++i)
     {
-         fscanf(pSegundos, "%d: %s %d ",&segundo[i].nCarta,segundo[i].plato,&segundo[i].precio);
+         fscanf(pSegundos, "%d %s %d ",&segundo[i].nCarta,segundo[i].plato,&segundo[i].precio);
     }
     }
 fclose(pSegundos);
@@ -56,7 +48,7 @@ fclose(pSegundos);
     {
          for(i=0;i<N;++i)
       {
-         fscanf(sPostres, "%d: %s %d ",&postre[i].nCarta,postre[i].plato,&postre[i].precio);
+         fscanf(sPostres, "%d %s %d ",&postre[i].nCarta,postre[i].plato,&postre[i].precio);
     }
  fclose(pPostres);
 }
@@ -76,8 +68,6 @@ if(0<eleccion1<11);
   case '1':
      pedido1 = &primero[0].plato;
      pedidoprecio1 = &primero[0].precio;
-
-
      break;
   case '2':
      pedido1 = &primero[1].plato;
@@ -242,33 +232,29 @@ else if(elecion3 = 0);
   printf("Que disfrute de la comida./n");
 }
 
-
-
- }
-
 //fichero con todo el menu elegigo
 
-elecFinal = fopen("Eleccion final.txt","a");
+elecFinal = fopen("Eleccion final.txt","w");
 
 fprintf(elecfinal,"Usted ha elegigo\n");
-fprintf(elecfinal,"Primero:%s\t", pedido1);
-fprintf(elecfinal,"Segundo:%s\t",pedido2);
-fprintf(elecfinal,"Postre:%s\n"t,pedido3);
+fprintf(elecfinal,"Primero:%s\n", pedido1);
+fprintf(elecfinal,"Segundo:%s\n",pedido2);
+fprintf(elecfinal,"Postre:%s",pedido3);
 
-pCalculadora = fopen("Cuenta.txt","a");
-fprintf(pCalculadora,"%f\t %f\t %f\n",&pedidoprecio1,&pedidoprecio2,&pedidoprecio3);
+pCalculadora = fopen("Cuenta.txt","w");
+fprintf(pCalculadora,"%f\t %f\t %f\t",&pedidoprecio1,&pedidoprecio2,&pedidoprecio3);
 fclose(pCalculadora);
-
+}
 }
 
 
 
-float calculadora(nP)
+float calculadora(void)
 {
 FILE *pPedido;
-float pri[nP],seg[nP],pos[nP],cuenta=0;
-int i=0;
-pPedido = fopen("Cuenta.txt","r");
+float pri,seg,pos,cuenta=0;
+
+pPedido = fopen("Eleccion final.txt","r");
 if (pf == NULL)
 {
 printf("Todavia no has pedido.\n");
@@ -281,14 +267,14 @@ else
 printf("Procedemos a mostrarle la cuenta.\n");
 pPedido = fopen("Cuenta.txt","r");
 
-while(fscanf(pPedido,"%f %f %f",&pri[i],&seg[i],&pos[i]) != EOF)
-    ++i;
+fscanf(pCalculadora,"%f %f %f",&pri,&seg,&pos);
 
-fclose(pPedido);
-for(i=0;i<nP;++i)
-cuenta += pri[i] + seg[i] + pos[i];
+cuenta = pri + seg + pos;
 
-
+return cuenta ;
 }//del else
-return cuenta;
+
+
+
+
 }
