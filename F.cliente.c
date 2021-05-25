@@ -6,6 +6,22 @@ float precio;
 int nCarta;
 }carta;
 
+typedef struct{
+char type;
+float pago;
+int holiday;
+
+}datos;
+
+typedef struct{
+char name[15];
+char surename[15];
+char work[15];
+int cont;
+datos people;
+}infoEmpleados;
+
+
 void cartas(void);
 {
    //pedido1 = primero[N];
@@ -293,4 +309,141 @@ cuenta += pri[i] + seg[i] + pos[i];
 return cuenta;
 }
 
+void inspecTrabajo(void)
+{
+  int numero,*nEmpleados,i=0;
+  FILE *empleado1,*empleado2,*empleado3,*empleado4;
+  infoEmpleados *nEmpleados;
+  int contador[3]={0,0,0};
+  pirntf("Buenas inspector, como podemos ayudarle.\n");
+  do{
+     printf("Indiqueme de cuantos empleados dispone (máximo 4):\t");
+     scanf("%i",&numero);
+  }while(numero==0)
+
+
+nEmpleados = malloc(sizeof(int) * numero);
+if (nEmpleados == NULL) {
+printf("Error: memoria no disponible.\n");
+exit(-1);
+}
+
+printf("El numero de empleados es %i",numero);
+printf("Perfecto analizaremos uno a uno.\n");
+
+if(numero==1)
+{
+empleado1 = fopen("Contrato1.xlsx","r");
+for(i=0;i<1;++i)
+{
+fscanf(empleado1,"%s;%s;%s;%i;%c;%f;%i",&nEmpleados[i].name,&nEmpleados[i].surename,&nEmpleados[i].work,&nEmpleados[i].cont,&nEmpleados[i].people.type,&nEmpleados[i].people.pago,&nEmpleados[i].people.holiday);
+}
+fclose(empleado1);
+
+contador[0]=compContrato(nEmpleados[0].name,nEmpleado.cont);
+if(contador[0] == 0)
+{
+contador[1]=compSalario(nEmpleados[0].name,nEmpleados[0].type,nEmpleados[0].people.pago);
+contador[2]=compVacaciones(nEmpleados[0].cont,nEmpleados[0].type,nEmpleados[0].people.pago);
+}
+printf("El balance de irregularidades es el siguiente:\n");
+primtf("Contratos:%i  Salario:%i  Vacaciones:%i",contador[0],contador[1],comtador[2]);
+
+}
+else if(numero==2)
+{
+empleado1 = fopen("Contrato1.xlsx","r");
+empleado2 = fopen("Contrato2.xlsx","r");
+
+for(i=0;i<2;++i)
+{
+fscanf(empleado1,"%s;%s;%s;%i;%c;%f;%i",&nEmpleados[i].name,&nEmpleados[i].surename,&nEmpleados[i].work,&nEmpleados[i].cont,&nEmpleados[i].people.type,&nEmpleados[i].people.pago,&nEmpleados[i].people.holiday);
+}
+fclose(empleado1);
+fclose(empleado2);
+
+for(i=0;i<2;++i)
+{
+contador[0] +=compContrato(nEmpleados[i].name,nEmpleado.cont);
+if(contador[0] == 0)
+{
+contador[1] +=compSalario(nEmpleados[i].name,nEmpleados[i].type,nEmpleados[i].people.pago);
+contador[2]=compVacaciones(nEmpleados[i].cont,nEmpleados[i].type,nEmpleados[i].people.pago);
+}
+}
+printf("El balance de irregularidades es el siguiente:\n");
+primtf("Contratos:%i  Salario:%i  Vacaciones:%i",contador[0],contador[1],comtador[2]);
+
+//compSalario(nEmpleados[0].cont,nEmpleados[0].type,nEmpleados[0].people.pago);
+//compVacaciones(nEmpleados[0].cont,nEmpleados[0].type,nEmpleados[0].people.pago);
+//compSalario(nEmpleados[1].cont,nEmpleados[1].type,nEmpleados[1].people.pago);
+//compVacaciones(nEmpleados[1].cont,nEmpleados[1].type,nEmpleados[1].people.pago);
+
+}
+else if(numero==3)
+{
+empleado1 = fopen("Contrato1.xlsx","r");
+empleado2 = fopen("Contrato2.xlsx","r");
+empleado3 = fopen("Contrato3.xlsx","r");
+
+for(i=0;i<3;++i)
+{
+fscanf(empleado1,"%s;%s;%s;%i;%c;%f;%i",&nEmpleados[i].name,&nEmpleados[i].surename,&nEmpleados[i].work,&nEmpleados[i].cont,&nEmpleados[i].people.type,&nEmpleados[i].people.pago,&nEmpleados[i].people.holiday);
+}
+fclose(empleado1);
+fclose(empleado2);
+fclose(empleado3);
+
+for(i=0;i<3;++i)
+{
+contador[0] +=compContrato(nEmpleados[i].name,nEmpleado.cont);
+if(contador[0] == 0)
+{
+contador[1] +=compSalario(nEmpleados[i].name,nEmpleados[i].type,nEmpleados[i].people.pago);
+contador[2]=compVacaciones(nEmpleados[i].cont,nEmpleados[i].type,nEmpleados[i].people.pago);
+}
+}
+printf("El balance de irregularidades es el siguiente:\n");
+primtf("Contratos:%i  Salario:%i  Vacaciones:%i",contador[0],contador[1],comtador[2]);
+
+}
+else if(numero==4)
+{
+empleado1 = fopen("Contrato1.xlsx","r");
+empleado2 = fopen("Contrato2.xlsx","r");
+empleado3 = fopen("Contrato3.xlsx","r");
+empleado4 = fopen("Contrato4.xlsx","r");
+
+for(i=0;i<4;++i)
+{
+fscanf(empleado1,"%s;%s;%s;%i;%c;%f;%i",&nEmpleados[i].name,&nEmpleados[i].surename,&nEmpleados[i].work,&nEmpleados[i].cont,&nEmpleados[i].people.type,&nEmpleados[i].people.pago,&nEmpleados[i].people.holiday);
+}
+fclose(empleado1);
+fclose(empleado2);
+fclose(empleado3);
+fclose(empleado4);
+
+for(i=0;i<4;++i)
+{
+contador[0] +=compContrato(nEmpleados[i].name,nEmpleado.cont);
+if(contador[0] == 0)
+{
+contador[1] +=compSalario(nEmpleados[i].name,nEmpleados[i].type,nEmpleados[i].people.pago);
+contador[2]=compVacaciones(nEmpleados[i].cont,nEmpleados[i].type,nEmpleados[i].people.pago);
+}
+}
+printf("El balance de irregularidades es el siguiente:\n");
+primtf("Contratos:%i  Salario:%i  Vacaciones:%i",contador[0],contador[1],comtador[2]);
+
+
+
+}
+else if(numero>4)
+{
+printf("Irregularidad: Debido a medidas covid el máximo de empleados es 4\n");
+printf("Sera tramitará su caso y sera propuesto para sancion.\n");
+}
+
+free(nEmpleados);
+}//fin de funcion
 

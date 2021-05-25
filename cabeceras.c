@@ -123,4 +123,27 @@ void proveedor(char c)
     else if (respuesta=='no' && respuesta=='NO' && respuesta=='No')
         printf("Si no es proveedor de ninguno de los productos anteriores, puede llamar al número facilitado en el menú principal.\n");
     }
-    while (respuesta!='si' && respuesta!='sí' && respuesta!='Si' && respuesta!='Sí' && respuesta!='SI' && respuesta!='SÍ' && respuesta!='no' && respuesta!='NO' && respuesta!='No');
+    while (respuesta!='si' && respuesta!='sí' && respuesta!='Si' && respuesta!='Sí' && respuesta!='SI' && respuesta!='SÍ' && respuesta!='no' && respuesta!='NO' && respuesta!='No')
+
+
+
+void gobierno(void)
+{
+int opGob;
+
+printf("Bienvenido, que funcion desempeña\t: ")
+printf("Inspector de trabajo (1), inspector de sanidad (2), policia(3),otra entidad (4):\t");
+scanf("%i",&opGob);
+
+switch (opGob)
+{
+    case '1':
+inspecTrabajo(void);
+
+}//fin switch
+
+
+
+
+}//fin funcion
+
