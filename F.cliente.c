@@ -292,3 +292,5 @@ cuenta += pri[i] + seg[i] + pos[i];
 }//del else
 return cuenta;
 }
+
+

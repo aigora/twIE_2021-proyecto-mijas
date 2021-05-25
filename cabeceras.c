@@ -32,6 +32,7 @@ scanf("%c", &opCliente);
          printf("Entendido, tomen asiento enseguida les traemos la carta.");
    }while(nPersonas == 0)
 
+
 //mesa=malloc(sizeof(int)* nPersonas);
 //if (memoria == NULL) {
 //printf("Error: memoria no disponible.\n");
