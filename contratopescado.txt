@@ -3,13 +3,14 @@ Directiva de aplicación Directiva 2014/24/EU - sobre Contratación Pública
 
 Clasificación CPV:
 
-15003061 - Bebidas y refrescos.
-42912100 - Máquinas y esprendeores de tabaco.
-42945325 - Recogida de desechos (cascos).
+15003470 - Pescado y productos marinos.
+42912967 - Máquinas y herramientas de trabajo.
+42911246 - Recogida de desechos orgánicos.
+
 
 Valor estimado del contrato: 61.440 EUR.
-Importe: 43.464 EUR.
-Importe (sin impuestos): 29.200 EUR.
+Importe: 32.112 EUR.
+Importe (sin impuestos): 21.560 EUR.
 Plazo de Ejecución: 12 Mes(es)
 Tipo de Contrato: Suministros
 Subtipo: Alquiler

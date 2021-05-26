@@ -1,0 +1,12 @@
+(1 Caja = 50 kg)
+(NECESITAMOS ÚNICAMENTE LAS CAJAS MARCADAS A LA DERECHA DE CADA TIPO DE CARNE)
+*******************************************************************************
+1 - Filetes Ternera. (2 cajas)        5 - Cinta Lomo. (NADA)       8 - Lomo Fino. (NADA)
+
+2 - Lomo Alto. (1 cajas)              6 - Chuletas. (1 caja)       9 - Aguja. (2 cajas)
+
+3 - Lomo bajo. (NADA)                 7 - Panceta. (NADA)
+
+4 - Solomillo. (2 cajas) 
+
+        *VACA*                              *CERDO*                          *RES*

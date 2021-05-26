@@ -1,0 +1,19 @@
+(NECESITAMOS ÚNICAMENTE LAS CAJAS MARCADAS A LA DERECHA DE CADA BEBIDA)
+
+(1 CAJA = 5kg)
+***********************************************************************
+1 - Merluza. (2 cajas)        7 - Sardina. (NADA)
+
+2 - Gallo. (1 caja)           8 - Bonito. (NADA)
+
+3 - Rodaballo. (NADA)         9 - Atún. (2 cajas)
+
+4 - Lenguado. (2 cajas)      10 - Salmón. (NADA)
+
+5 - Rape. (NADA)
+
+6 - Bacalao. (1 cajas)
+
+
+     *BLANCO*                       *AZUL*
+***********************************************************************

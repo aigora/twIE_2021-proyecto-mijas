@@ -2,26 +2,18 @@
 (NECESITAMOS ÚNICAMENTE LAS CAJAS MARCADAS A LA DERECHA DE CADA BEBIDA)
 *****************************COCA-COLA*************************************************
 
--Coca-Cola Original (3 Cajas).                -Fanta Naranja (2 Cajas).
+1 -Coca-Cola Original (3 Cajas).                2 -Fanta Naranja (2 Cajas).
 
--Coca-Cola Light (2 Cajas).                   -Fanta Limón (NADA).
+3 -Coca-Cola Light (2 Cajas).                   4 -Fanta Limón (NADA).
 
--Coca-Cola Zero (1 cajas).                    -Nestea (NADA).
+5 -Coca-Cola Zero (1 cajas).                    6 -Nestea (NADA).
 
--Coca-Cola Zero-Zero (NADA).                  -Aquarius (1 Cajas).
+7 -Coca-Cola Zero-Zero (NADA).                  8 -Aquarius (1 Cajas).
 
--Trinaranjus (1 cajas).                       -Aquarius de Limón (NADA).
+9 -Trinaranjus (2 cajas).                       10 -Aquarius de Limón (NADA).
 
 *****************************SCHWEPPES*************************************************
 
--Schweppes Tónica Original (1 cajas).         -Schweppes Tónica Pink (NADA).
+11 -Schweppes Tónica Original (1 cajas).         12 -Schweppes Tónica Pink (1 caja).
 
--Schweppes Limón (NADA).                      -Schweppes Naranja (NADA).
-
-*****************************CERVEZA***************************************************
-
--1/3 Estrella Galicia Normal (3 Cajas).       -1/5 Estrella Galicia Sin Alcohol (1 Cajas).
-
--1/3 Estrella Galicia 1906 (3 Cajas).         -1/3 Estrella Galicia Tostada %0 (NADA).
-
--1/3 Mahou 5 Estrellas (2 Cajas).             -1/3 Mahou Maestra (1 Cajas).
+13 -Schweppes Limón (NADA).                      14 -Schweppes Naranja (NADA).
