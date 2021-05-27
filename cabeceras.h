@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void cliente(char c);
-void proveedor(char c);
-void publicista(char c);
-void gobierno(int *p);
+void cliente(void);
+void proveedor(void);
+void publicista(void);
+void gobierno(void);
