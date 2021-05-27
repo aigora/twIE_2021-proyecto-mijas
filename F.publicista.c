@@ -32,7 +32,7 @@ int main(){
 
 void identificar(){
 
-    system("cls");
+    printf("\033[2J");
 
     FILE *f;
 
@@ -80,7 +80,7 @@ void contratacion(){
 
 
 
-    system("cls");
+    printf("\033[2J");
     printf("Bienvenido:\n");
     printf("%s", publi.nombre);
     printf("%s\n", publi.apellido);
@@ -146,7 +146,7 @@ void vercontrato(){
 void nuevocontrato(){
     char aux[500];
     char acepto;
-    system("cls");
+    printf("\033[2J");
 
     printf("NUEVO CONTRATO: \n\n");
 
