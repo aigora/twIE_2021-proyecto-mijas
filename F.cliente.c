@@ -279,7 +279,7 @@ fclose(pCalculadora);
 
 
 
-float calculadora(nP)
+float calculadora(int nP)
 {
 FILE *pPedido;
 float pri[nP],seg[nP],pos[nP],cuenta=0;
