@@ -16,7 +16,7 @@ typedef struct{
 identificacion publi;
 
 int main(){
-  
+
     printf("Dirigiendose a 'identificacion'\n");
 
     identificar();
@@ -31,7 +31,7 @@ int main(){
 
 
 void identificar(){
-    
+
     system("cls");
 
     FILE *f;
@@ -51,7 +51,7 @@ void identificar(){
     fprintf(f, "Agencia: %s", publi.agencia);
 
     printf("\n");
-    
+
     printf("Introduzca su nombre: ");
     fgets(publi.nombre, 20, stdin);
     fprintf(f, "Nombre: %s", publi.nombre);
@@ -66,8 +66,8 @@ void identificar(){
 
 
     fclose(f);
-    
-    
+
+
 
 
 }
@@ -77,9 +77,9 @@ void contratacion(){
       char op1;
 
     do{
-        
 
-    
+
+
     system("cls");
     printf("Bienvenido:\n");
     printf("%s", publi.nombre);
@@ -97,7 +97,7 @@ void contratacion(){
         case 'E':
             vercontrato();
             break;
-        
+
         case 'N':
         case 'n':
             nuevocontrato();
@@ -107,14 +107,14 @@ void contratacion(){
         case 'S':
 
             break;
-        
+
         default:
             break;
         }
 
     }while(op1 != 'e' && op1 != 'n' && op1 != 'E' && op1 != 'N' && op1 != 'S' && op1 != 's');
 
-    
+
 }
 
 void vercontrato(){
@@ -163,7 +163,7 @@ void nuevocontrato(){
         fgets(aux, 500, f);
         printf("%s", aux);
     }
-   
+
 
     fclose(f);
 
@@ -177,7 +177,4 @@ void nuevocontrato(){
     }else{
         printf("Que lastima, esperemos que vuelva pronto. ");
     }
-
-
-
 }
