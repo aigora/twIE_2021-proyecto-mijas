@@ -1,5 +1,5 @@
-#include <F.clientes.h>
-#include <cabeceras.h>
+#include "F.cliente.h"
+#include "cabeceras.h"
 
 int compContrato(char nombre,int contra);
 int compSalario(char nombre,char tipo[],float saldo);

@@ -1,5 +1,5 @@
 #define N 11
-#include <stadio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void cartas(void);

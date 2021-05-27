@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <F.cliente.h>
-#include <F.proveedor.h>
-#include <F.inspeccion.h>
-#include <F.publicista.h>
+#include "F.cliente.h"
+#include "F.proveedor.h"
+#include "F.inspeccion.h"
+#include "F.publicista.h"
 
 int main(){
     char op1, op2, op3, op4;
@@ -29,7 +29,7 @@ int main(){
 
       case 'C':
       case 'c':
-            cliente(void);
+            cliente();
             break;
       case 'P':
       case 'p':
