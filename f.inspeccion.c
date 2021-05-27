@@ -1,6 +1,6 @@
-#include <F.clientes.h>
-#include <cabeceras.h>
-#include <F.inspeccion.h>
+#include "F.cliente.h"
+#include "cabeceras.h"
+#include "F.inspeccion.h"
 
 
 int compContrato(char nombre,int contra)
