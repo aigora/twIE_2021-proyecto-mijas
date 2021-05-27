@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <fclientes.h>
+#include <F.cliente.h>
+#include <F.proveedor.h>
+#include <F.inspeccion.h>
+#include <F.publicista.h>
 
 int main(){
     char op1, op2, op3, op4;
