@@ -27,8 +27,10 @@ int main(){
                     {
                         case 'C':
                         case 'c':
-                            cliente();
-                            break;
+                            {
+                              cliente();
+                              break;
+                            }
                         case 'P':
                         case 'p':
                             proveedor();
@@ -42,7 +44,7 @@ int main(){
                             gobierno();
                             break;
                    }
-            printf("\n");
+                   printf("\n");
                 }
                 while ((op1!='C')  &&  (op1!='U') &&  (op1!='P') &&  (op1!='G') &&  (op1!='S') && (op1!='c')  &&  (op1!='u') &&  (op1!='p') &&  (op1!='g') &&  (op1!='s'));
         }
