@@ -44,7 +44,7 @@ int main(){
                         case 'G':
                         case 'g':
                             gobierno();
-                            main()
+                            main();
                             break;
                    }
                    printf("\n");
