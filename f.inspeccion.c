@@ -8,7 +8,7 @@ int compContrato(char nombre,int contra)
     if(contra == 0)
 {
 printf("Se ha encontrado una irregularidad.\n");
-printf("No dispone de contrato o no esta en regla.\");
+printf("No dispone de contrato o no esta en regla.\n");
 return 1;//el uno significa irregularidad
 }
 else if(contra == 1)
@@ -49,7 +49,7 @@ return 1;
 }
 
 else
-printf("Salario correcto.\n")
+printf("Salario correcto.\n");
 return 0;
 
 case 'R':
@@ -62,17 +62,18 @@ return 1;
 }
 
 else
-printf("Salario correcto.\n")
+printf("Salario correcto.\n");
 return 0;
 }
 
 }
 
 
-int compVacaciones(int contra,char tipo,int vacas)
+int compVacaciones(int nombre,char tipo,int vacas)
 {
 
-switch(tipo){
+switch(tipo)
+{
 
 //case 'L':
 //if(contra == 0)
@@ -91,7 +92,7 @@ printf("El trabajador %s no dispone del numero de dias estipulado para su tipo d
 return 1;
 }
 else
-printf("Vacaciones en regla.\n")
+printf("Vacaciones en regla.\n");
 return 0;
 
 
@@ -103,8 +104,7 @@ printf("El trabajador %s no dispone del numero de dias estipulado para su tipo d
 return 1;
 }
 else
-printf("Vacaciones en regla.\n")
+printf("Vacaciones en regla.\n");
 return 0;
-
 }//fin de funcion
 

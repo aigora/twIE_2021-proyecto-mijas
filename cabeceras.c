@@ -56,18 +56,6 @@ do{
                      //pCuenta = &cuenta;
                    // printf("calculadora\n");
                     break;
-                case 'S':
-                case 's':
-                    printf("Suplementos\n");
-                    break;
-                case 'L':
-                case 'l':
-                    printf("Localizacion\n");
-                    break;
-                case 'A':
-                case 'a':
-                    printf("Alergenos\n");
-                    break;
             }
 
 
@@ -129,7 +117,7 @@ void proveedor(char c)
 
 void gobierno(void)
 {
-char opGob;
+char opGob[2];
 
 printf("Bienvenido, ¿quiere inspeccionar las condiciones de empleo? (si/no):\n");
 do
