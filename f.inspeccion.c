@@ -96,7 +96,7 @@ return 0;
 
 
 case 'R':
-if(vacas < 30
+if(vacas < 30)
 {
 printf("Irregularidad encontrada");
 printf("El trabajador %s no dispone del numero de dias estipulado para su tipo de contrato.",nombre);
