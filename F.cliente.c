@@ -247,12 +247,12 @@ else if(eleccion3 = 0)
 elecFinal = fopen("Eleccion final.txt","a");
 
 fprintf(elecFinal,"Usted ha elegigo\n");
-fprintf(elecFinal,"Primero:%s\t", pedido1);
-fprintf(elecFinal,"Segundo:%s\t",pedido2);
-fprintf(elecFinal,"Postre:%s\n",pedido3);
+fprintf(elecFinal,"Primero:%s\t", *pedido1);
+fprintf(elecFinal,"Segundo:%s\t",*pedido2);
+fprintf(elecFinal,"Postre:%s\n",*pedido3);
 
 pCalculadora = fopen("Cuenta.txt","a");
-fprintf(pCalculadora,"%f\t %f\t %f\n",pedidoprecio1,pedidoprecio2,pedidoprecio3);
+fprintf(pCalculadora,"%f\t %f\t %f\n",*pedidoprecio1,*pedidoprecio2,*pedidoprecio3);
 fclose(elecFinal);
 fclose(pCalculadora);
 

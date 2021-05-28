@@ -129,21 +129,14 @@ void proveedor(char c)
 
 void gobierno(void)
 {
-int opGob;
+char opGob;
 
-printf("Bienvenido, que funcion desempeña\t: ")
-printf("Inspector de trabajo (1), inspector de sanidad (2), policia(3),otra entidad (4):\t");
-scanf("%i",&opGob);
-
-switch (opGob)
+printf("Bienvenido, ¿quiere inspeccionar las condiciones de empleo? (si/no):\n");
+do
 {
-    case '1':
-inspecTrabajo(void);
-
-}//fin switch
-
-
-
+    scanf("%s",opGob);
+}while(opGob)
+inspecTrabajo();
 
 }//fin funcion
 
