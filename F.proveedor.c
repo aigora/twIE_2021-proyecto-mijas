@@ -2,26 +2,15 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-typedef struct
-{
-   int dd;
-   int mm;
-   int yy;
-}fecha;
 
-typedef struct
-{
-    char tipo;
-    float importe;
-    int tiempo;
-}tcondicion;
+
 void proveedortabaco (void)
 {
     char elec;
     srand(time(NULL));
     int nums = rand()%4;
     char terminar;
-    int marca,cajas;
+    int marca,bloques;
     time_t rawtime = time(NULL);
     struct tm *now = localtime(&rawtime);
     fecha actual;
@@ -314,7 +303,7 @@ void proveedortabaco (void)
         while(otraop!='no' && otraop!='No' && otraop!='NO' && otraop!='si' && otraop!='Si' && otraop!='SI' && otraop!='sí' && otraop!='Sí' && otraop!='SÍ');
 
         }
-        else
+        else//antepenultimo corchete
         {
             tcondicion condicion;
             char contratotabaco[1000];
@@ -920,9 +909,10 @@ void proveedortabaco (void)
                     }
                   while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
-    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
-}
 
+}
+while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+}
 
 
 
@@ -1843,8 +1833,11 @@ void proveedorbebida(void)
                     }
                   while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
-    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+
 }
+while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+}
+
 
 void proveedorpescado (void)
 {
@@ -2702,8 +2695,10 @@ void proveedorpescado (void)
                     }
                   while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
-    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
 }
+while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+}
+
 
 void proveedorcarne (void)
 {
@@ -3562,6 +3557,7 @@ void proveedorcarne (void)
                     }
                   while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
-    while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
-}
 
+}
+while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+}

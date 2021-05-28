@@ -3,7 +3,7 @@
 
 void cliente(void)
 {
-char opCliente
+char opCliente;
 int nPersonas, contPersonas=0;
 int *mesa;
 float cuenta,*pCuenta;
@@ -30,7 +30,7 @@ scanf("%c", &opCliente);
          printf("Entendido, tome asiento enseguida le traemos la carta.");
          else if(nPersonas > 1)
          printf("Entendido, tomen asiento enseguida les traemos la carta.");
-   }while(nPersonas == 0)
+   }while(nPersonas == 0);
 
 
 //mesa=malloc(sizeof(int)* nPersonas);
@@ -38,12 +38,12 @@ scanf("%c", &opCliente);
 //printf("Error: memoria no disponible.\n");
 //exit(-1);
 //}
-//for(contPersonas=0;contPersonas<nPersonas;contPersonas)
+//for(contPersonas=0;contPersonas<nPersonas;contPersonas);
 do{
-    carta(void);
+    carta();
     contPersonas++;
 
-}while(contPersonas<nPersonas)
+}while(contPersonas<nPersonas);
 
 
                     //printf("carta\n");
@@ -73,14 +73,14 @@ do{
 
         }while (opCliente!='c'  &&  opCliente!='p' &&  opCliente!='s' &&  opCliente!='l' &&  opCliente!='a' && opCliente!='C'  &&  opCliente!='P' &&  opCliente!='S' &&  opCliente!='L' &&  opCliente!='A');
          //}while (c!='c'  &&  c!='p' &&  c!='s' &&  c!='l' &&  c!='a' && c!='C'  &&  c!='P' &&  c!='S' &&  c!='L' &&  c!='A');
-        printf("Desea continuar con la opcion cliente\t")
+        printf("Desea continuar con la opcion cliente\t");
 
 }
 
 void proveedor(char c)
 {
     char respuesta,producto;
-    printf("¡Bienvenido proveedor\a!")
+    printf("¡Bienvenido proveedor\a!");
     printf("¿Que clase de producto abastece? Escriba el producto del que nos provee de los siguientes:\n");
     printf("Tabaco ; Bebida ; Pescado ; Carnes ;\n");
     do
@@ -117,7 +117,7 @@ void proveedor(char c)
           break;
        }
       }
-      while (producto!='tabaco' && producto!='Tabaco' && producto!='TABACO' && producto!='bebida' && producto!='Bebida' && producto!='BEBIDA' && producto!='pescado' && producto!='Pescado' && producto!='PESCADO' && producto!='carnes' && producto!='Carnes' && producto!='CARNES')
+      while (producto!='tabaco' && producto!='Tabaco' && producto!='TABACO' && producto!='bebida' && producto!='Bebida' && producto!='BEBIDA' && producto!='pescado' && producto!='Pescado' && producto!='PESCADO' && producto!='carnes' && producto!='Carnes' && producto!='CARNES');
     }
     }
     else if (respuesta=='no' && respuesta=='NO' && respuesta=='No')

@@ -54,5 +54,5 @@ int main(){
         }
            printf("Adios, esperemos que el servicio halla sido de su agrado\n");
            printf("Que vuelva pronto\n");
-           return 0;
+return 0;
 }
