@@ -18,7 +18,7 @@ int main(){
         {
             do
                 {
-                    system("cls");
+                    printf("\033[2J");
                     printf("Bienvenido al Restaurante Mijas\n\n");
                     printf("Con que identidad se relaciona?: \n");
                     printf("Cliente 'C',Proveedor 'P', Publicista 'U', Gobierno 'G', Salir 'S':");
