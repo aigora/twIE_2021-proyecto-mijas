@@ -29,6 +29,7 @@ int main(){
                         case 'c':
                             {
                               cliente();
+                              main();
                               break;
                             }
                         case 'P':
@@ -38,10 +39,12 @@ int main(){
                         case 'u':
                         case 'U':
                             publicista();
+                            main();
                             break;
                         case 'G':
                         case 'g':
                             gobierno();
+                            main()
                             break;
                    }
                    printf("\n");
