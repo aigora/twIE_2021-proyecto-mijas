@@ -7,7 +7,7 @@ typedef struct
 
 typedef struct
 {
-    char tipo;
+    char tipo[20];
     float importe;
     int tiempo;
 }tcondicion;

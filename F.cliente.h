@@ -6,8 +6,7 @@ float precio;
 int nCarta;
 }carta;
 
-
-
 void cartas(void);
+
 float calculadora(int nP);
 

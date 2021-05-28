@@ -252,7 +252,7 @@ fprintf(elecFinal,"Segundo:%s\t",pedido2);
 fprintf(elecFinal,"Postre:%s\n",pedido3);
 
 pCalculadora = fopen("Cuenta.txt","a");
-fprintf(pCalculadora,"%f\t %f\t %f\n",&pedidoprecio1,&pedidoprecio2,&pedidoprecio3);
+fprintf(pCalculadora,"%f\t %f\t %f\n",pedidoprecio1,pedidoprecio2,pedidoprecio3);
 fclose(elecFinal);
 fclose(pCalculadora);
 

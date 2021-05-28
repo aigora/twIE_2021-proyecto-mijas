@@ -6,10 +6,10 @@
 
 void proveedortabaco (void)
 {
-    char elec;
+    char elec[15];
     srand(time(NULL));
     int nums = rand()%4;
-    char terminar;
+    char terminar[15];
     int marca,bloques;
     time_t rawtime = time(NULL);
     struct tm *now = localtime(&rawtime);
@@ -19,15 +19,15 @@ void proveedortabaco (void)
     actual.yy = now->tm_year+1900;
     fecha entrega,rango;
     int repetir;
-    char otraop;
-    char salirseguir;
+    char otraop[15];
+    char salirseguir[15];
     int qc;
     int rango2;
     float impres;
     int cambio;
-    char resp;
-    char resp2;
-    char resp3;
+    char resp[15];
+    char resp2[15];
+    char resp3[15];
 
 
 
@@ -38,8 +38,8 @@ void proveedortabaco (void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elec);
-        if ((elec='Entrega') || (elec='entrega') || (elec='ENTREGA'))
+        scanf("%s",elec);
+        if ((elec[15]=="Entrega") || (elec[15]=="entrega") || (elec[15]=="ENTREGA"))
         {
 
             char listatabaco[1000];
@@ -81,7 +81,7 @@ void proveedortabaco (void)
                         {
                             printf("No necesitamos de este tipo de tabaco,\n");
                             printf("lea la lista facilitada e intentelo de nuevo.\n");
-                            terminar='no';
+                            terminar[15]="no";
                         }
                         else
                         {
@@ -92,13 +92,13 @@ void proveedortabaco (void)
                                     if ((bloques=1) || (bloques=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 bloques.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -108,13 +108,13 @@ void proveedortabaco (void)
                                     if (bloques=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 bloque.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -124,13 +124,13 @@ void proveedortabaco (void)
                                     if ((bloques=1) || (bloques=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 bloques.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -140,13 +140,13 @@ void proveedortabaco (void)
                                     if (bloques=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 bloque.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -156,13 +156,13 @@ void proveedortabaco (void)
                                     if ((bloques=1) || (bloques=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 bloques.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -172,13 +172,13 @@ void proveedortabaco (void)
                                     if ((bloques=1) || (bloques=2) || (bloques=3))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 3 bloques.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -188,13 +188,13 @@ void proveedortabaco (void)
                                     if (bloques=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 bloque.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -204,30 +204,30 @@ void proveedortabaco (void)
                                     if (bloques=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 bloques.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
                             }
                         }
                     }
-                    while(terminar='no');
+                    while(terminar[15]="no");
 
                     printf("¿Ha terminado? Escriba (si), si quiere pasar a concretar la fecha de entrega;\n");
                     printf("o (no), si aun nos va a entregar más tipos de tabaco:\t");
                     do
                         {
-                            scanf("%c",terminar);
+                            scanf("%s",terminar);
                         }
-                    while(terminar!='si' && terminar!='Si' && terminar!='SI' && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!='no' && terminar!='No' && terminar!='NO');
+                    while(terminar!="si" && terminar!="Si" && terminar!="SI" && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!="no" && terminar!="No" && terminar!="NO");
                 }
-                while ((marca<1) || (marca>16) || (bloques<=0) || (terminar='no') || (terminar='No') || (terminar='NO'));
+                while ((marca<1) || (marca>16) || (bloques<=0) || (terminar[15]="no") || (terminar[15]="No") || (terminar[15]="NO"));
 
 
             printf("Concretemos la fecha para el reabastecimiento.\n");
@@ -276,16 +276,16 @@ void proveedortabaco (void)
         do
         {
           printf("¿Quiere realizar otra operacion como proveedor? (si/no):\t");
-          scanf("%c",otraop);
-            if ((otraop='no') || (otraop='No') || (otraop='NO'))
+          scanf("%s",otraop);
+            if ((otraop[15]="no") || (otraop[15]="No") || (otraop[15]="NO"))
             {
               printf("¿Quiere volver al MENU PRINCIPAL o SALIR de nuestra plataforma?\n");
 
               do
               {
                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                  scanf("%c",salirseguir);
-                if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                  scanf("%s",salirseguir);
+                if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                 {
                     printf("Volviendo al menu principal...");
                     main();
@@ -293,14 +293,13 @@ void proveedortabaco (void)
                 else
                 {
                     printf("Gracias por usar nuestra plataforma. Buen día.");
-                    return 0;
                 }
 
               }
-              while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+              while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
             }
         }
-        while(otraop!='no' && otraop!='No' && otraop!='NO' && otraop!='si' && otraop!='Si' && otraop!='SI' && otraop!='sí' && otraop!='Sí' && otraop!='SÍ');
+        while(otraop[15]!="no" && otraop[15]!="No" && otraop[15]!="NO" && otraop[15]!="si" && otraop[15]!="Si" && otraop[15]!="SI" && otraop[15]!='sí' && otraop[15]!='Sí' && otraop[15]!='SÍ');
 
         }
         else//antepenultimo corchete
@@ -406,7 +405,7 @@ void proveedortabaco (void)
                       printf("Ingrese (literalmente) el tipo de condición (abastecimiento/recogida/seguro):\t");
                       do
                       {
-                          scanf("%c",condicion.tipo);
+                          scanf("%s",condicion.tipo);
                       }
                       while((condicion.tipo!='abastecimiento') && (condicion.tipo!='recogida') && (condicion.tipo!='seguro'));
                       fflush(stdin);
@@ -436,7 +435,7 @@ void proveedortabaco (void)
                       fread(&condicion,sizeof(tcondicion),1,e);
                       while(!feof(e));
                       {
-                          printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                          printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                           fread(&condicion,sizeof(tcondicion),1,e);
                       }
                       fclose(e);
@@ -444,13 +443,13 @@ void proveedortabaco (void)
                   printf("¿Quiere realizar algun cambio? (si/no):\t");
                   do
                   {
-                    scanf("%c",resp);
+                    scanf("%s",resp);
                   }
-                  while((resp!='si') && (resp!='no'));
-                  if (resp='si')
+                  while((resp!="si") && (resp!="no"));
+                  if (resp[15]="si")
                   {
                       FILE *e;
-                      e=feopen("condicionestabaco.txt","r+b");
+                      e=fopen("condicionestabaco.txt","r+b");
                       if (e==NULL)
                         printf("Error.\n");
                       else
@@ -459,7 +458,7 @@ void proveedortabaco (void)
                          printf("abastecimiento/recogida/seguro\n");
                          do
                             {
-                                scanf("%c",resp2);
+                                scanf("%s",resp2);
                             }
                         while((resp2!='abastecimiento') && (resp2!='recogida') && (resp2!='seguro'));
                         tcondicion condicion;
@@ -492,16 +491,16 @@ void proveedortabaco (void)
                   printf("Examinemos sus sugerencias...");
                   if ((condicion.tipo=='abastecimiento')&&(condicion.importe>13.34))
                   {
-                      printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                      printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                       printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                       printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                       printf("¿Le parece bien? (si/no):\t");
                       do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                      while ((resp3!='si') && (resp3!='no'));
-                      switch(resp3)
+                      while ((resp3[15]!="si") && (resp3[15]!="no"));
+                      switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -517,7 +516,7 @@ void proveedortabaco (void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -547,7 +546,7 @@ void proveedortabaco (void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -557,13 +556,13 @@ void proveedortabaco (void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -579,7 +578,7 @@ void proveedortabaco (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -592,8 +591,8 @@ void proveedortabaco (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -604,7 +603,7 @@ void proveedortabaco (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -617,13 +616,13 @@ void proveedortabaco (void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -639,7 +638,7 @@ void proveedortabaco (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -652,8 +651,8 @@ void proveedortabaco (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -664,7 +663,7 @@ void proveedortabaco (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -682,7 +681,7 @@ void proveedortabaco (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -690,16 +689,16 @@ void proveedortabaco (void)
                   }
                   if((condicion.tipo=='recogida')&&(condicion.importe>13.34))
                   {
-                    printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                    printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                     printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                     printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                     printf("¿Le parece bien? (si/no):\t");
                     do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                    while ((resp3!='si') && (resp3!='no'));
-                    switch(resp3)
+                    while ((resp3[15]!="si") && (resp3[15]!="no"));
+                    switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -715,7 +714,7 @@ void proveedortabaco (void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -745,7 +744,7 @@ void proveedortabaco (void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -755,13 +754,13 @@ void proveedortabaco (void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -777,7 +776,7 @@ void proveedortabaco (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -790,8 +789,8 @@ void proveedortabaco (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -799,10 +798,9 @@ void proveedortabaco (void)
                                                   else
                                                      {
                                                        printf("Gracias por usar nuestra plataforma. Buen día.");
-                                                       return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -814,13 +812,13 @@ void proveedortabaco (void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -836,7 +834,7 @@ void proveedortabaco (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -849,8 +847,8 @@ void proveedortabaco (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -861,7 +859,7 @@ void proveedortabaco (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -879,13 +877,13 @@ void proveedortabaco (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
                                         }
                   }
-                  if (condicion.tipo='seguro');
+                  if (condicion.tipo[15]='seguro');
                   {
                       printf("Para negociar las características del seguro, es necesario\n");
                       printf("concretar una reunión junto a nuestro gestor, llame nuestro numero para\n");
@@ -895,8 +893,8 @@ void proveedortabaco (void)
                   do
                     {
                         printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                        scanf("%c",salirseguir);
-                        if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                        scanf("%s",salirseguir);
+                        if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                             {
                                printf("Volviendo al menu principal...");
                                main();
@@ -907,11 +905,11 @@ void proveedortabaco (void)
                                return 0;
                             }
                     }
-                  while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                  while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
 
 }
-while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+while(elec[15]!='entrega' && elec[15]!='Entrega' && elec[15]!='ENTREGA' && elec[15]!='contrato' && elec[15]!='Contrato' && elec[15]!='CONTRATO');
 }
 
 
@@ -920,10 +918,10 @@ while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' 
 
 void proveedorbebida(void)
 {
-    char elec;
+    char elec[15];
     srand(time(NULL));
     int nums = rand()%4;
-    char terminar;
+    char terminar[15];
     int marca,cajas;
     time_t rawtime = time(NULL);
     struct tm *now = localtime(&rawtime);
@@ -933,15 +931,15 @@ void proveedorbebida(void)
     actual.yy = now->tm_year+1900;
     fecha entrega,rango;
     int repetir;
-    char otraop;
-    char salirseguir;
+    char otraop[15];
+    char salirseguir[15];
     int qc;
     int rango2;
     float impres;
     int cambio;
-    char resp;
-    char resp2;
-    char resp3;
+    char resp[15];
+    char resp2[15];
+    char resp3[15];
 
 
 
@@ -952,8 +950,8 @@ void proveedorbebida(void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elec);
-        if ((elec='Entrega') || (elec='entrega') || (elec='ENTREGA'))
+        scanf("%s",elec);
+        if ((elec[15]='Entrega') || (elec[15]='entrega') || (elec[15]='ENTREGA'))
         {
 
             char listabebida[1000];
@@ -995,7 +993,7 @@ void proveedorbebida(void)
                         {
                             printf("No necesitamos de este tipo de bebida,\n");
                             printf("lea la lista facilitada e intentelo de nuevo.\n");
-                            terminar='no';
+                            terminar[15]="no";
                         }
                         else
                         {
@@ -1006,13 +1004,13 @@ void proveedorbebida(void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1022,13 +1020,13 @@ void proveedorbebida(void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1038,13 +1036,13 @@ void proveedorbebida(void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1054,13 +1052,13 @@ void proveedorbebida(void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1070,13 +1068,13 @@ void proveedorbebida(void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1086,13 +1084,13 @@ void proveedorbebida(void)
                                     if ((cajas=1) || (cajas=2) || (cajas=3))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 3 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1102,13 +1100,13 @@ void proveedorbebida(void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1118,30 +1116,30 @@ void proveedorbebida(void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
                             }
                         }
                     }
-                    while(terminar='no');
+                    while(terminar[15]="no");
 
                     printf("¿Ha terminado? Escriba (si), si quiere pasar a concretar la fecha de entrega;\n");
                     printf("o (no), si aun nos va a entregar más tipos de bebida:\t");
                     do
                         {
-                            scanf("%c",terminar);
+                            scanf("%s",terminar);
                         }
-                    while(terminar!='si' && terminar!='Si' && terminar!='SI' && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!='no' && terminar!='No' && terminar!='NO');
+                    while(terminar!="si" && terminar!="Si" && terminar!="SI" && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!="no" && terminar!="No" && terminar!="NO");
                 }
-                while ((marca<1) || (marca>16) || (cajas<=0) || (terminar='no') || (terminar='No') || (terminar='NO'));
+                while ((marca<1) || (marca>16) || (cajas<=0) || (terminar[15]="no") || (terminar[15]="No") || (terminar[15]="NO"));
 
 
             printf("Concretemos la fecha para el reabastecimiento.\n");
@@ -1190,16 +1188,16 @@ void proveedorbebida(void)
         do
         {
           printf("¿Quiere realizar otra operacion como proveedor? (si/no):\t");
-          scanf("%c",otraop);
-            if ((otraop='no') || (otraop='No') || (otraop='NO'))
+          scanf("%s",otraop);
+            if ((otraop[15]="no") || (otraop[15]="No") || (otraop[15]="NO"))
             {
               printf("¿Quiere volver al MENU PRINCIPAL o SALIR de nuestra plataforma?\n");
 
               do
               {
                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                  scanf("%c",salirseguir);
-                if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                  scanf("%s",salirseguir);
+                if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                 {
                     printf("Volviendo al menu principal...");
                     main();
@@ -1211,10 +1209,10 @@ void proveedorbebida(void)
                 }
 
               }
-              while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+              while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
             }
         }
-        while(otraop!='no' && otraop!='No' && otraop!='NO' && otraop!='si' && otraop!='Si' && otraop!='SI' && otraop!='sí' && otraop!='Sí' && otraop!='SÍ');
+        while(otraop[15]!="no" && otraop[15]!="No" && otraop[15]!="NO" && otraop[15]!="si" && otraop[15]!="Si" && otraop[15]!="SI" && otraop[15]!='sí' && otraop[15]!='Sí' && otraop[15]!='SÍ');
 
         }
         else
@@ -1330,7 +1328,7 @@ void proveedorbebida(void)
                       printf("Ingrese (literalmente) el tipo de condición (abastecimiento/recogida/seguro):\t");
                       do
                       {
-                          scanf("%c",condicion.tipo);
+                          scanf("%s",condicion.tipo);
                       }
                       while((condicion.tipo!='abastecimiento') && (condicion.tipo!='recogida') && (condicion.tipo!='seguro'));
                       fflush(stdin);
@@ -1360,7 +1358,7 @@ void proveedorbebida(void)
                       fread(&condicion,sizeof(tcondicion),1,e);
                       while(!feof(e));
                       {
-                          printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                          printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                           fread(&condicion,sizeof(tcondicion),1,e);
                       }
                       fclose(e);
@@ -1368,10 +1366,10 @@ void proveedorbebida(void)
                   printf("¿Quiere realizar algun cambio? (si/no):\t");
                   do
                   {
-                    scanf("%c",resp);
+                    scanf("%s",resp);
                   }
-                  while((resp!='si') && (resp!='no'));
-                  if (resp='si')
+                  while((resp[15]!="si") && (resp[15]!="no"));
+                  if (resp[15]="si")
                   {
                       FILE *e;
                       e=feopen("condicionesbebida.txt","r+b");
@@ -1383,7 +1381,7 @@ void proveedorbebida(void)
                          printf("abastecimiento/recogida/seguro\n");
                          do
                             {
-                                scanf("%c",resp2);
+                                scanf("%s",resp2);
                             }
                         while((resp2!='abastecimiento') && (resp2!='recogida') && (resp2!='seguro'));
                         tcondicion condicion;
@@ -1416,16 +1414,16 @@ void proveedorbebida(void)
                   printf("Examinemos sus sugerencias...");
                   if ((condicion.tipo=='abastecimiento')&&(condicion.importe>13.34))
                   {
-                      printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                      printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                       printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                       printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                       printf("¿Le parece bien? (si/no):\t");
                       do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                      while ((resp3!='si') && (resp3!='no'));
-                      switch(resp3)
+                      while ((resp3[15]!="si") && (resp3[15]!="no"));
+                      switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -1441,7 +1439,7 @@ void proveedorbebida(void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -1471,7 +1469,7 @@ void proveedorbebida(void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -1481,13 +1479,13 @@ void proveedorbebida(void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -1503,7 +1501,7 @@ void proveedorbebida(void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -1516,8 +1514,8 @@ void proveedorbebida(void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -1528,7 +1526,7 @@ void proveedorbebida(void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -1541,13 +1539,13 @@ void proveedorbebida(void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -1563,7 +1561,7 @@ void proveedorbebida(void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -1576,8 +1574,8 @@ void proveedorbebida(void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -1588,7 +1586,7 @@ void proveedorbebida(void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -1606,7 +1604,7 @@ void proveedorbebida(void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -1614,16 +1612,16 @@ void proveedorbebida(void)
                   }
                   if((condicion.tipo=='recogida')&&(condicion.importe>13.34))
                   {
-                    printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                    printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                     printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                     printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                     printf("¿Le parece bien? (si/no):\t");
                     do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                    while ((resp3!='si') && (resp3!='no'));
-                    switch(resp3)
+                    while ((resp3[15]!="si") && (resp3[15]!="no"));
+                    switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -1639,7 +1637,7 @@ void proveedorbebida(void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -1669,7 +1667,7 @@ void proveedorbebida(void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -1679,13 +1677,13 @@ void proveedorbebida(void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -1701,7 +1699,7 @@ void proveedorbebida(void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -1714,8 +1712,8 @@ void proveedorbebida(void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -1726,7 +1724,7 @@ void proveedorbebida(void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -1738,13 +1736,13 @@ void proveedorbebida(void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -1760,7 +1758,7 @@ void proveedorbebida(void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -1773,8 +1771,8 @@ void proveedorbebida(void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -1785,7 +1783,7 @@ void proveedorbebida(void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -1803,13 +1801,13 @@ void proveedorbebida(void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
                                         }
                   }
-                  if (condicion.tipo='seguro');
+                  if (condicion.tipo[15]='seguro');
                   {
                       printf("Para negociar las características del seguro, es necesario\n");
                       printf("concretar una reunión junto a nuestro gestor, llame nuestro numero para\n");
@@ -1819,8 +1817,8 @@ void proveedorbebida(void)
                   do
                     {
                         printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                        scanf("%c",salirseguir);
-                        if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                        scanf("%s",salirseguir);
+                        if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                             {
                                printf("Volviendo al menu principal...");
                                main();
@@ -1831,20 +1829,20 @@ void proveedorbebida(void)
                                return 0;
                             }
                     }
-                  while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                  while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
 
 }
-while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+while(elec[15]!='entrega' && elec[15]!='Entrega' && elec[15]!='ENTREGA' && elec[15]!='contrato' && elec[15]!='Contrato' && elec[15]!='CONTRATO');
 }
 
 
 void proveedorpescado (void)
 {
-    char elec;
+    char elec[15];
     srand(time(NULL));
     int nums = rand()%4;
-    char terminar;
+    char terminar[15];
     int marca,cajas;
     time_t rawtime = time(NULL);
     struct tm *now = localtime(&rawtime);
@@ -1854,15 +1852,15 @@ void proveedorpescado (void)
     actual.yy = now->tm_year+1900;
     fecha entrega,rango;
     int repetir;
-    char otraop;
-    char salirseguir;
+    char otraop[15];
+    char salirseguir[15];
     int qc;
     int rango2;
     float impres;
     int cambio;
-    char resp;
-    char resp2;
-    char resp3;
+    char resp[15];
+    char resp2[15];
+    char resp3[15];
 
 
 
@@ -1873,8 +1871,8 @@ void proveedorpescado (void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elec);
-        if ((elec='Entrega') || (elec='entrega') || (elec='ENTREGA'))
+        scanf("%s",elec);
+        if ((elec[15]='Entrega') || (elec[15]='entrega') || (elec[15]='ENTREGA'))
         {
 
             char listapescado[1000];
@@ -1916,7 +1914,7 @@ void proveedorpescado (void)
                         {
                             printf("No necesitamos de este tipo de productos marinos,\n");
                             printf("lea la lista facilitada e intentelo de nuevo.\n");
-                            terminar='no';
+                            terminar[15]="no";
                         }
                         else
                         {
@@ -1927,13 +1925,13 @@ void proveedorpescado (void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1943,13 +1941,13 @@ void proveedorpescado (void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1959,13 +1957,13 @@ void proveedorpescado (void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1975,13 +1973,13 @@ void proveedorpescado (void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -1991,30 +1989,30 @@ void proveedorpescado (void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
                             }
                         }
                     }
-                    while(terminar='no');
+                    while(terminar[15]="no");
 
                     printf("¿Ha terminado? Escriba (si), si quiere pasar a concretar la fecha de entrega;\n");
                     printf("o (no), si aun nos va a entregar más tipos de productos marinos:\t");
                     do
                         {
-                            scanf("%c",terminar);
+                            scanf("%s",terminar);
                         }
-                    while(terminar!='si' && terminar!='Si' && terminar!='SI' && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!='no' && terminar!='No' && terminar!='NO');
+                    while(terminar!="si" && terminar!="Si" && terminar!="SI" && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!="no" && terminar!="No" && terminar!="NO");
                 }
-                while ((marca<1) || (marca>16) || (cajas<=0) || (terminar='no') || (terminar='No') || (terminar='NO'));
+                while ((marca<1) || (marca>16) || (cajas<=0) || (terminar[15]="no") || (terminar[15]="No") || (terminar[15]="NO"));
 
 
             printf("Concretemos la fecha para el reabastecimiento.\n");
@@ -2063,16 +2061,16 @@ void proveedorpescado (void)
         do
         {
           printf("¿Quiere realizar otra operacion como proveedor? (si/no):\t");
-          scanf("%c",otraop);
-            if ((otraop='no') || (otraop='No') || (otraop='NO'))
+          scanf("%s",otraop);
+            if ((otraop[15]="no") || (otraop[15]="No") || (otraop[15]="NO"))
             {
               printf("¿Quiere volver al MENU PRINCIPAL o SALIR de nuestra plataforma?\n");
 
               do
               {
                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                  scanf("%c",salirseguir);
-                if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                  scanf("%s",salirseguir);
+                if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                 {
                     printf("Volviendo al menu principal...");
                     main();
@@ -2084,10 +2082,10 @@ void proveedorpescado (void)
                 }
 
               }
-              while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+              while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="PRINCIPAL" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
             }
         }
-        while(otraop!='no' && otraop!='No' && otraop!='NO' && otraop!='si' && otraop!='Si' && otraop!='SI' && otraop!='sí' && otraop!='Sí' && otraop!='SÍ');
+        while(otraop[15]!="no" && otraop[15]!="No" && otraop[15]!="NO" && otraop[15]!="si" && otraop[15]!="Si" && otraop[15]!="SI" && otraop[15]!='sí' && otraop[15]!='Sí' && otraop[15]!='SÍ');
         }
         else
         {
@@ -2192,7 +2190,7 @@ void proveedorpescado (void)
                       printf("Ingrese (literalmente) el tipo de condición (abastecimiento/recogida/seguro):\t");
                       do
                       {
-                          scanf("%c",condicion.tipo);
+                          scanf("%s",condicion.tipo);
                       }
                       while((condicion.tipo!='abastecimiento') && (condicion.tipo!='recogida') && (condicion.tipo!='seguro'));
                       fflush(stdin);
@@ -2222,7 +2220,7 @@ void proveedorpescado (void)
                       fread(&condicion,sizeof(tcondicion),1,e);
                       while(!feof(e));
                       {
-                          printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                          printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                           fread(&condicion,sizeof(tcondicion),1,e);
                       }
                       fclose(e);
@@ -2230,10 +2228,10 @@ void proveedorpescado (void)
                   printf("¿Quiere realizar algun cambio? (si/no):\t");
                   do
                   {
-                    scanf("%c",resp);
+                    scanf("%s",resp);
                   }
-                  while((resp!='si') && (resp!='no'));
-                  if (resp='si')
+                  while((resp!="si") && (resp!="no"));
+                  if (resp[15]="si")
                   {
                       FILE *e;
                       e=feopen("condicionespescado.txt","r+b");
@@ -2245,7 +2243,7 @@ void proveedorpescado (void)
                          printf("abastecimiento/recogida/seguro\n");
                          do
                             {
-                                scanf("%c",resp2);
+                                scanf("%s",resp2);
                             }
                         while((resp2!='abastecimiento') && (resp2!='recogida') && (resp2!='seguro'));
                         tcondicion condicion;
@@ -2278,16 +2276,16 @@ void proveedorpescado (void)
                   printf("Examinemos sus sugerencias...");
                   if ((condicion.tipo=='abastecimiento')&&(condicion.importe>13.34))
                   {
-                      printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                      printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                       printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                       printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                       printf("¿Le parece bien? (si/no):\t");
                       do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                      while ((resp3!='si') && (resp3!='no'));
-                      switch(resp3)
+                      while ((resp3[15]!="si") && (resp3[15]!="no"));
+                      switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -2303,7 +2301,7 @@ void proveedorpescado (void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -2333,7 +2331,7 @@ void proveedorpescado (void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -2343,13 +2341,13 @@ void proveedorpescado (void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -2365,7 +2363,7 @@ void proveedorpescado (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -2378,8 +2376,8 @@ void proveedorpescado (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="Principal") || (salirseguir[15]="PRINCIPAL"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -2390,7 +2388,7 @@ void proveedorpescado (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -2403,13 +2401,13 @@ void proveedorpescado (void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -2425,7 +2423,7 @@ void proveedorpescado (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -2438,8 +2436,8 @@ void proveedorpescado (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -2450,7 +2448,7 @@ void proveedorpescado (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -2468,7 +2466,7 @@ void proveedorpescado (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -2476,16 +2474,16 @@ void proveedorpescado (void)
                   }
                   if((condicion.tipo=='recogida')&&(condicion.importe>13.34))
                   {
-                    printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                    printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                     printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                     printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                     printf("¿Le parece bien? (si/no):\t");
                     do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                    while ((resp3!='si') && (resp3!='no'));
-                    switch(resp3)
+                    while ((resp3[15]!="si") && (resp3[15]!="no"));
+                    switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -2501,7 +2499,7 @@ void proveedorpescado (void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -2531,7 +2529,7 @@ void proveedorpescado (void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -2541,13 +2539,13 @@ void proveedorpescado (void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -2563,7 +2561,7 @@ void proveedorpescado (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -2576,8 +2574,8 @@ void proveedorpescado (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -2588,7 +2586,7 @@ void proveedorpescado (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -2600,13 +2598,13 @@ void proveedorpescado (void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -2622,7 +2620,7 @@ void proveedorpescado (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -2635,8 +2633,8 @@ void proveedorpescado (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -2647,7 +2645,7 @@ void proveedorpescado (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -2665,13 +2663,13 @@ void proveedorpescado (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
                                         }
                   }
-                  if (condicion.tipo='seguro');
+                  if (condicion.tipo[15]='seguro');
                   {
                       printf("Para negociar las características del seguro, es necesario\n");
                       printf("concretar una reunión junto a nuestro gestor, llame nuestro numero para\n");
@@ -2681,8 +2679,8 @@ void proveedorpescado (void)
                   do
                     {
                         printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                        scanf("%c",salirseguir);
-                        if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                        scanf("%s",salirseguir);
+                        if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                             {
                                printf("Volviendo al menu principal...");
                                main();
@@ -2693,19 +2691,19 @@ void proveedorpescado (void)
                                return 0;
                             }
                     }
-                  while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                  while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
 }
-while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+while(elec[15]!='entrega' && elec[15]!='Entrega' && elec[15]!='ENTREGA' && elec[15]!='contrato' && elec[15]!='Contrato' && elec[15]!='CONTRATO');
 }
 
 
 void proveedorcarne (void)
 {
-    char elec;
+    char elec[15];
     srand(time(NULL));
     int nums = rand()%4;
-    char terminar;
+    char terminar[15];
     int marca,cajas;
     time_t rawtime = time(NULL);
     struct tm *now = localtime(&rawtime);
@@ -2715,15 +2713,15 @@ void proveedorcarne (void)
     actual.yy = now->tm_year+1900;
     fecha entrega,rango;
     int repetir;
-    char otraop;
-    char salirseguir;
+    char otraop[15];
+    char salirseguir[15];
     int qc;
     int rango2;
     float impres;
     int cambio;
-    char resp;
-    char resp2;
-    char resp3;
+    char resp[15];
+    char resp2[15];
+    char resp3[15];
 
 
 
@@ -2734,8 +2732,8 @@ void proveedorcarne (void)
     {
         printf("Asegurese de escribir ortográficamente bien la respuesta.\n");
         printf("Escriba:\t");
-        scanf("%c",elec);
-        if ((elec='Entrega') || (elec='entrega') || (elec='ENTREGA'))
+        scanf("%s",elec);
+        if ((elec[15]='Entrega') || (elec[15]='entrega') || (elec[15]='ENTREGA'))
         {
 
             char listacarnes[1000];
@@ -2777,7 +2775,7 @@ void proveedorcarne (void)
                         {
                             printf("No necesitamos de este tipo de carnes,\n");
                             printf("lea la lista facilitada e intentelo de nuevo.\n");
-                            terminar='no';
+                            terminar[15]="no";
                         }
                         else
                         {
@@ -2788,13 +2786,13 @@ void proveedorcarne (void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -2804,13 +2802,13 @@ void proveedorcarne (void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -2820,13 +2818,13 @@ void proveedorcarne (void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -2836,13 +2834,13 @@ void proveedorcarne (void)
                                     if (cajas=1)
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 1 caja.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
@@ -2852,30 +2850,30 @@ void proveedorcarne (void)
                                     if ((cajas=1) || (cajas=2))
                                     {
                                         printf("Perfecto.\n");
-                                        terminar='si';
+                                        terminar[15]="si";
                                     }
                                     else
                                     {
                                         printf("No necesitamos tantas unidades de este tipo,\n");
                                         printf("admitiriamos como maximo 2 cajas.\n");
-                                        terminar='no';
+                                        terminar[15]="no";
                                     }
                                 }
                             break;
                             }
                         }
                     }
-                    while(terminar='no');
+                    while(terminar[15]="no");
 
                     printf("¿Ha terminado? Escriba (si), si quiere pasar a concretar la fecha de entrega;\n");
                     printf("o (no), si aun nos va a entregar más tipos de carnes:\t");
                     do
                         {
-                            scanf("%c",terminar);
+                            scanf("%s",terminar);
                         }
-                    while(terminar!='si' && terminar!='Si' && terminar!='SI' && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!='no' && terminar!='No' && terminar!='NO');
+                    while(terminar!="si" && terminar!="Si" && terminar!="SI" && terminar!='sí' && terminar!='Sí' && terminar!='SÍ' && terminar!="no" && terminar!="No" && terminar!="NO");
                 }
-                while ((marca<1) || (marca>16) || (cajas<=0) || (terminar='no') || (terminar='No') || (terminar='NO'));
+                while ((marca<1) || (marca>16) || (cajas<=0) || (terminar[15]="no") || (terminar[15]="No") || (terminar[15]="NO"));
 
 
             printf("Concretemos la fecha para el reabastecimiento.\n");
@@ -2924,16 +2922,16 @@ void proveedorcarne (void)
         do
         {
           printf("¿Quiere realizar otra operacion como proveedor? (si/no):\t");
-          scanf("%c",otraop);
-            if ((otraop='no') || (otraop='No') || (otraop='NO'))
+          scanf("%s",otraop);
+            if ((otraop[15]="no") || (otraop[15]="No") || (otraop[15]="NO"))
             {
               printf("¿Quiere volver al MENU PRINCIPAL o SALIR de nuestra plataforma?\n");
 
               do
               {
                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                  scanf("%c",salirseguir);
-                if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                  scanf("%s",salirseguir);
+                if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                 {
                     printf("Volviendo al menu principal...");
                     main();
@@ -2945,10 +2943,10 @@ void proveedorcarne (void)
                 }
 
               }
-              while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+              while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
             }
         }
-        while(otraop!='no' && otraop!='No' && otraop!='NO' && otraop!='si' && otraop!='Si' && otraop!='SI' && otraop!='sí' && otraop!='Sí' && otraop!='SÍ');
+        while(otraop[15]!="no" && otraop[15]!="No" && otraop[15]!="NO" && otraop[15]!="si" && otraop[15]!="Si" && otraop[15]!="SI" && otraop[15]!='sí' && otraop[15]!='Sí' && otraop[15]!='SÍ');
 
         }
         else
@@ -3054,7 +3052,7 @@ void proveedorcarne (void)
                       printf("Ingrese (literalmente) el tipo de condición (abastecimiento/recogida/seguro):\t");
                       do
                       {
-                          scanf("%c",condicion.tipo);
+                          scanf("%s",condicion.tipo);
                       }
                       while((condicion.tipo!='abastecimiento') && (condicion.tipo!='recogida') && (condicion.tipo!='seguro'));
                       fflush(stdin);
@@ -3084,7 +3082,7 @@ void proveedorcarne (void)
                       fread(&condicion,sizeof(tcondicion),1,e);
                       while(!feof(e));
                       {
-                          printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                          printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                           fread(&condicion,sizeof(tcondicion),1,e);
                       }
                       fclose(e);
@@ -3092,10 +3090,10 @@ void proveedorcarne (void)
                   printf("¿Quiere realizar algun cambio? (si/no):\t");
                   do
                   {
-                    scanf("%c",resp);
+                    scanf("%s",resp);
                   }
-                  while((resp!='si') && (resp!='no'));
-                  if (resp='si')
+                  while((resp!="si") && (resp!="no"));
+                  if (resp[15]="si")
                   {
                       FILE *e;
                       e=feopen("condicionescarne.txt","r+b");
@@ -3107,7 +3105,7 @@ void proveedorcarne (void)
                          printf("abastecimiento/recogida/seguro\n");
                          do
                             {
-                                scanf("%c",resp2);
+                                scanf("%s",resp2);
                             }
                         while((resp2!='abastecimiento') && (resp2!='recogida') && (resp2!='seguro'));
                         tcondicion condicion;
@@ -3140,16 +3138,16 @@ void proveedorcarne (void)
                   printf("Examinemos sus sugerencias...");
                   if ((condicion.tipo=='abastecimiento')&&(condicion.importe>13.34))
                   {
-                      printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                      printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                       printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                       printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                       printf("¿Le parece bien? (si/no):\t");
                       do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                      while ((resp3!='si') && (resp3!='no'));
-                      switch(resp3)
+                      while ((resp3[15]!="si") && (resp3[15]!="no"));
+                      switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -3165,7 +3163,7 @@ void proveedorcarne (void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -3195,7 +3193,7 @@ void proveedorcarne (void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -3205,13 +3203,13 @@ void proveedorcarne (void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -3227,7 +3225,7 @@ void proveedorcarne (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -3240,8 +3238,8 @@ void proveedorcarne (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -3252,7 +3250,7 @@ void proveedorcarne (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -3265,13 +3263,13 @@ void proveedorcarne (void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -3287,7 +3285,7 @@ void proveedorcarne (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -3300,8 +3298,8 @@ void proveedorcarne (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -3312,7 +3310,7 @@ void proveedorcarne (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -3330,7 +3328,7 @@ void proveedorcarne (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -3338,16 +3336,16 @@ void proveedorcarne (void)
                   }
                   if((condicion.tipo=='recogida')&&(condicion.importe>13.34))
                   {
-                    printf("Creemos que %f € no es un precio que pagaríamos por %c...\n",condicion.importe,condicion.tipo);
+                    printf("Creemos que %f € no es un precio que pagaríamos por %s...\n",condicion.importe,condicion.tipo);
                     printf("Otro proveedor podría facilitarnos el mismo servicio por un precio menor,\n");
                     printf("como por ejemplo 9 €, pero aceptaríamos un importe mensual de 11 € de su parte.\n",condicion.importe-4,condicion.importe-2);
                     printf("¿Le parece bien? (si/no):\t");
                     do
                       {
-                          scanf("%c",resp3);
+                          scanf("%s",resp3);
                       }
-                    while ((resp3!='si') && (resp3!='no'));
-                    switch(resp3)
+                    while ((resp3[15]!="si") && (resp3[15]!="no"));
+                    switch(resp3[15])
                       {
                       case 'si':
                         {
@@ -3363,7 +3361,7 @@ void proveedorcarne (void)
                                 fread(&condicion,sizeof(tcondicion),1,e);
                                 while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                 fclose(e);
@@ -3393,7 +3391,7 @@ void proveedorcarne (void)
                                   fread(&condicion,sizeof(tcondicion),1,e);
                                   while(!feof(e));
                                       {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                       }
                                   fclose(e);
@@ -3403,13 +3401,13 @@ void proveedorcarne (void)
                             {
                                 printf("Es un precio más asequible, pero tengamos en cuenta que le pagamos más servicios\n");
                                 printf("¿qué le parece si lo dejamos en %f? (si/no)\t",nimp-1.34);
-                                char resp4;
+                                char resp4[15];
                                 do
                                 {
-                                    scanf("%c",resp4);
+                                    scanf("%s",resp4);
                                 }
-                                while ((resp4!='si')&&(resp4!='no'));
-                                switch(resp4)
+                                while ((resp4[15]!="si")&&(resp4[15]!="no"));
+                                switch(resp4[15])
                                    {
                                     case 'si':
                                     {
@@ -3425,7 +3423,7 @@ void proveedorcarne (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -3438,8 +3436,8 @@ void proveedorcarne (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -3450,7 +3448,7 @@ void proveedorcarne (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                             }
@@ -3462,13 +3460,13 @@ void proveedorcarne (void)
                   {
                       printf("Es un precio considerable, pero tengamos en cuenta que le pagamos más servicios\n");
                       printf("¿qué le parece si lo dejamos en %f? (si/no)\t",condicion.importe-1.13);
-                      char resp5;
+                      char resp5[15];
                                 do
                                 {
-                                    scanf("%c",resp5);
+                                    scanf("%s",resp5);
                                 }
-                                while ((resp5!='si')&&(resp5!='no'));
-                                switch(resp5)
+                                while ((resp5[15]!="si")&&(resp5[15]!="no"));
+                                switch(resp5[15])
                                    {
                                     case 'si':
                                     {
@@ -3484,7 +3482,7 @@ void proveedorcarne (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
@@ -3497,8 +3495,8 @@ void proveedorcarne (void)
                                              do
                                                 {
                                                   printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                                                  scanf("%c",salirseguir);
-                                                  if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                                                  scanf("%s",salirseguir);
+                                                  if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                                                      {
                                                        printf("Volviendo al menu principal...");
                                                        main();
@@ -3509,7 +3507,7 @@ void proveedorcarne (void)
                                                        return 0;
                                                      }
                                                 }
-                                             while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                                             while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
                                          }
                                    }
                   }
@@ -3527,13 +3525,13 @@ void proveedorcarne (void)
                                            fread(&condicion,sizeof(tcondicion),1,e);
                                       while(!feof(e));
                                         {
-                                         printf("%c / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
+                                         printf("%s / %0.2f €/ %i mes(es)\n\n",condicion.tipo,condicion.importe,condicion.tiempo);
                                          fread(&condicion,sizeof(tcondicion),1,e);
                                         }
                                       fclose(e);
                                         }
                   }
-                  if (condicion.tipo='seguro');
+                  if (condicion.tipo[15]='seguro');
                   {
                       printf("Para negociar las características del seguro, es necesario\n");
                       printf("concretar una reunión junto a nuestro gestor, llame nuestro numero para\n");
@@ -3543,8 +3541,8 @@ void proveedorcarne (void)
                   do
                     {
                         printf("Escriba (principal) para volver o (salir) para salir de la plataforma:\t");
-                        scanf("%c",salirseguir);
-                        if ((salirseguir='principal') || (salirseguir='PRINCIPAL') || (salirseguir='Principal'))
+                        scanf("%s",salirseguir);
+                        if ((salirseguir[15]="principal") || (salirseguir[15]="PRINCIPAL") || (salirseguir[15]="Principal"))
                             {
                                printf("Volviendo al menu principal...");
                                main();
@@ -3555,9 +3553,9 @@ void proveedorcarne (void)
                                return 0;
                             }
                     }
-                  while(salirseguir!='principal' && salirseguir!='PRINCIPAL' && salirseguir!='Principal' && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
+                  while(salirseguir!="principal" && salirseguir!="PRINCIPAL" && salirseguir!="Principal" && salirseguir!='salir' && salirseguir!='SALIR' && salirseguir!='Salir');
     }
 
 }
-while(elec!='entrega' && elec!='Entrega' && elec!='ENTREGA' && elec!='contrato' && elec!='Contrato' && elec!='CONTRATO');
+while(elec[15]!='entrega' && elec[15]!='Entrega' && elec[15]!='ENTREGA' && elec[15]!='contrato' && elec[15]!='Contrato' && elec[15]!='CONTRATO');
 }
