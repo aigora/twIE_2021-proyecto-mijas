@@ -7,8 +7,6 @@
 void proveedortabaco (void)
 {
     char elec[15];
-    srand(time(NULL));
-    int nums = rand()%4;
     char terminar[15];
     int marca,bloques;
     time_t rawtime = time(NULL);

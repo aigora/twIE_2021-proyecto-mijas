@@ -40,7 +40,7 @@ scanf("%c", &opCliente);
 //}
 //for(contPersonas=0;contPersonas<nPersonas;contPersonas);
 do{
-    carta();
+    cartas();
     contPersonas++;
 
 }while(contPersonas<nPersonas);
