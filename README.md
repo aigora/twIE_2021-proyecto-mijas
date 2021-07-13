@@ -1,9 +1,6 @@
 # Atención al cliente Restaurante Mijas
 Plataforma interactiva enfocada en resolver cualquier gestión entre el cliente, proveedor u otra identidad con el restaurante.
 ## Integrantes del Equipo
-- Diego Fernandes Alves ([DiegoFernandesAlves](https://github.com/DiegoFernandesAlves)).
-
-- Diego Bastida Juanes ([DiegoBastida](https://github.com/DiegoBastida)).
 
 - Ignacio Cartes Guilarte ([IgnacioCartes](https://github.com/ignaciocartes99)).
 
